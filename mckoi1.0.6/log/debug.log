@@ -1,0 +1,2413 @@
+**** Debug log started: Wed Jan 07 21:46:43 ICT 2015 ****
+% Storage System: v1 file storage mode.
+% Internal Data Cache size:          4194304
+% Internal Data Cache max cell size: 8192
+% lookup_comparison_list = false
+% read_only = false
+% transaction_error_on_dirty_select = true
+% ignore_case_for_identifiers = false
+% Java NIO API is available.
+% io_safety_level = 10
+% Using stardard IO API for heap buffered file access.
+% [Buffer Manager] Using IO API: Java IO
+% [Buffer Manager] Page Size: 8192
+% [Buffer Manager] Max pages: 256
+% Using regex bridge: java.util.regexp
+% No 'function_factories' config property found.
+% statement_cache = true
+% Max worker threads set to: 4
+% Starting Database Server
+**** Debug log started: Wed Jan 07 22:02:46 ICT 2015 ****
+% Storage System: v1 file storage mode.
+% Internal Data Cache size:          4194304
+% Internal Data Cache max cell size: 8192
+% lookup_comparison_list = false
+% read_only = false
+% transaction_error_on_dirty_select = true
+% ignore_case_for_identifiers = false
+% Java NIO API is available.
+% io_safety_level = 10
+% Using stardard IO API for heap buffered file access.
+% [Buffer Manager] Using IO API: Java IO
+% [Buffer Manager] Page Size: 8192
+% [Buffer Manager] Max pages: 256
+% Using regex bridge: java.util.regexp
+% No 'function_factories' config property found.
+% statement_cache = true
+% Max worker threads set to: 4
+% Starting Database Server
+**** Debug log started: Wed Jan 07 22:09:52 ICT 2015 ****
+% Storage System: v1 file storage mode.
+% Internal Data Cache size:          4194304
+% Internal Data Cache max cell size: 8192
+% lookup_comparison_list = false
+% read_only = false
+% transaction_error_on_dirty_select = true
+% ignore_case_for_identifiers = false
+% Java NIO API is available.
+% io_safety_level = 10
+% Using stardard IO API for heap buffered file access.
+% [Buffer Manager] Using IO API: Java IO
+% [Buffer Manager] Page Size: 8192
+% [Buffer Manager] Max pages: 256
+> com.mckoi.database.DatabaseSystem ( lvl: 40 )
+  Error starting buffer manager
+[ TIME: Wed Jan 07 22:09:52 ICT 2015 ]
+% java.io.IOException: Journal file already exists.
+	at com.mckoi.store.JournalledSystem.newTopJournalFile(JournalledSystem.java:344)
+	at com.mckoi.store.JournalledSystem.start(JournalledSystem.java:157)
+	at com.mckoi.store.LoggingBufferManager.start(LoggingBufferManager.java:174)
+	at com.mckoi.database.TransactionSystem.init(TransactionSystem.java:585)
+	at com.mckoi.database.DatabaseSystem.init(DatabaseSystem.java:98)
+	at com.mckoi.database.control.DBController.createDatabase(DBController.java:159)
+	at com.mckoi.database.control.DBController.databaseExists(DBController.java:67)
+	at com.mckoi.database.jdbcserver.DefaultLocalBootable.checkExists(DefaultLocalBootable.java:160)
+	at com.mckoi.database.jdbc.MDriver.connectToLocal(MDriver.java:416)
+	at com.mckoi.database.jdbc.MDriver.connect(MDriver.java:483)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at com.mckoi.tools.JDBCQueryTool.main(JDBCQueryTool.java:357)
+[ TIME: Wed Jan 07 22:19:42 ICT 2015 ]
+% com.mckoi.database.sql.ParseException: Encountered "user" at line 1, column 14.
+Was expecting one of:
+    "if" ...
+    "old" ...
+    "new" ...
+    "name" ...
+    "java" ...
+    "action" ...
+    "groups" ...
+    "option" ...
+    "account" ...
+    "password" ...
+    "language" ...
+    "privileges" ...
+    <QUOTED_VARIABLE> ...
+    <IDENTIFIER> ...
+    <DOT_DELIMINATED_REF> ...
+    <QUOTED_DELIMINATED_REF> ...
+    
+	at com.mckoi.database.sql.SQL.generateParseException(SQL.java:6070)
+	at com.mckoi.database.sql.SQL.jj_consume_token(SQL.java:5939)
+	at com.mckoi.database.sql.SQL.TableName(SQL.java:4113)
+	at com.mckoi.database.sql.SQL.CreateTable(SQL.java:454)
+	at com.mckoi.database.sql.SQL.Create(SQL.java:238)
+	at com.mckoi.database.sql.SQL.Statement(SQL.java:174)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:94)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+[ TIME: Wed Jan 07 22:19:54 ICT 2015 ]
+% com.mckoi.database.sql.ParseException: Encountered "user" at line 1, column 14.
+Was expecting one of:
+    "if" ...
+    "old" ...
+    "new" ...
+    "name" ...
+    "java" ...
+    "action" ...
+    "groups" ...
+    "option" ...
+    "account" ...
+    "password" ...
+    "language" ...
+    "privileges" ...
+    <QUOTED_VARIABLE> ...
+    <IDENTIFIER> ...
+    <DOT_DELIMINATED_REF> ...
+    <QUOTED_DELIMINATED_REF> ...
+    
+	at com.mckoi.database.sql.SQL.generateParseException(SQL.java:6070)
+	at com.mckoi.database.sql.SQL.jj_consume_token(SQL.java:5939)
+	at com.mckoi.database.sql.SQL.TableName(SQL.java:4113)
+	at com.mckoi.database.sql.SQL.CreateTable(SQL.java:454)
+	at com.mckoi.database.sql.SQL.Create(SQL.java:238)
+	at com.mckoi.database.sql.SQL.Statement(SQL.java:174)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:94)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+[ TIME: Wed Jan 07 22:20:01 ICT 2015 ]
+% com.mckoi.database.sql.ParseException: Encountered "user" at line 1, column 14.
+Was expecting one of:
+    "if" ...
+    "old" ...
+    "new" ...
+    "name" ...
+    "java" ...
+    "action" ...
+    "groups" ...
+    "option" ...
+    "account" ...
+    "password" ...
+    "language" ...
+    "privileges" ...
+    <QUOTED_VARIABLE> ...
+    <IDENTIFIER> ...
+    <DOT_DELIMINATED_REF> ...
+    <QUOTED_DELIMINATED_REF> ...
+    
+	at com.mckoi.database.sql.SQL.generateParseException(SQL.java:6070)
+	at com.mckoi.database.sql.SQL.jj_consume_token(SQL.java:5939)
+	at com.mckoi.database.sql.SQL.TableName(SQL.java:4113)
+	at com.mckoi.database.sql.SQL.CreateTable(SQL.java:454)
+	at com.mckoi.database.sql.SQL.Create(SQL.java:238)
+	at com.mckoi.database.sql.SQL.Statement(SQL.java:174)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:94)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+[ TIME: Wed Jan 07 22:20:38 ICT 2015 ]
+% com.mckoi.database.sql.ParseException: Encountered "User" at line 1, column 14.
+Was expecting one of:
+    "if" ...
+    "old" ...
+    "new" ...
+    "name" ...
+    "java" ...
+    "action" ...
+    "groups" ...
+    "option" ...
+    "account" ...
+    "password" ...
+    "language" ...
+    "privileges" ...
+    <QUOTED_VARIABLE> ...
+    <IDENTIFIER> ...
+    <DOT_DELIMINATED_REF> ...
+    <QUOTED_DELIMINATED_REF> ...
+    
+	at com.mckoi.database.sql.SQL.generateParseException(SQL.java:6070)
+	at com.mckoi.database.sql.SQL.jj_consume_token(SQL.java:5939)
+	at com.mckoi.database.sql.SQL.TableName(SQL.java:4113)
+	at com.mckoi.database.sql.SQL.CreateTable(SQL.java:454)
+	at com.mckoi.database.sql.SQL.Create(SQL.java:238)
+	at com.mckoi.database.sql.SQL.Statement(SQL.java:174)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:94)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+[ TIME: Wed Jan 07 22:20:44 ICT 2015 ]
+% com.mckoi.database.sql.ParseException: Encountered "User" at line 1, column 14.
+Was expecting one of:
+    "if" ...
+    "old" ...
+    "new" ...
+    "name" ...
+    "java" ...
+    "action" ...
+    "groups" ...
+    "option" ...
+    "account" ...
+    "password" ...
+    "language" ...
+    "privileges" ...
+    <QUOTED_VARIABLE> ...
+    <IDENTIFIER> ...
+    <DOT_DELIMINATED_REF> ...
+    <QUOTED_DELIMINATED_REF> ...
+    
+	at com.mckoi.database.sql.SQL.generateParseException(SQL.java:6070)
+	at com.mckoi.database.sql.SQL.jj_consume_token(SQL.java:5939)
+	at com.mckoi.database.sql.SQL.TableName(SQL.java:4113)
+	at com.mckoi.database.sql.SQL.CreateTable(SQL.java:454)
+	at com.mckoi.database.sql.SQL.Create(SQL.java:238)
+	at com.mckoi.database.sql.SQL.Statement(SQL.java:174)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:94)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ create TABLE supplier(
+	idSupp String(50) not null unique,
+	nama String(50),
+	constraint pk_supplier primary key(idSupp)
+) ]
+
+]
+[ TIME: Wed Jan 07 22:21:33 ICT 2015 ]
+% com.mckoi.database.DatabaseException: Table 'APP.supplier' already exists.
+	at com.mckoi.database.interpret.CreateTable.evaluate(CreateTable.java:391)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:147)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ create TABLE transaksi(
+	no_trans int not null unique,
+	tgl date,
+	username String(50),
+constraint pk_transaksi primary key(no_transaksi),
+constraint fk_transaksi_users foreign key(username) references users (username)
+) ]
+
+]
+[ TIME: Wed Jan 07 22:22:05 ICT 2015 ]
+% com.mckoi.database.DatabaseException: Column 'no_transaksi' not found the table.
+	at com.mckoi.database.interpret.ColumnChecker.checkColumnList(ColumnChecker.java:128)
+	at com.mckoi.database.interpret.CreateTable.prepare(CreateTable.java:333)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ create TABLE transaksi(
+	no_trans int not null unique,
+	tgl date,
+	username String(50),
+constraint pk_transaksi primary key(no_transaksi),
+constraint fk_transaksi_users foreign key(username) references users (username)
+) ]
+
+]
+[ TIME: Wed Jan 07 22:23:08 ICT 2015 ]
+% com.mckoi.database.DatabaseException: Column 'no_transaksi' not found the table.
+	at com.mckoi.database.interpret.ColumnChecker.checkColumnList(ColumnChecker.java:128)
+	at com.mckoi.database.interpret.CreateTable.prepare(CreateTable.java:333)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ create TABLE transaksi(
+	no_trans int not null unique,
+	tgl date,
+	username String(50),
+constraint pk_transaksi primary key(no_transaksi),
+constraint fk_transaksi_users foreign key(username) references users (username)
+) ]
+
+]
+[ TIME: Wed Jan 07 22:24:51 ICT 2015 ]
+% com.mckoi.database.DatabaseException: Column 'no_transaksi' not found the table.
+	at com.mckoi.database.interpret.ColumnChecker.checkColumnList(ColumnChecker.java:128)
+	at com.mckoi.database.interpret.CreateTable.prepare(CreateTable.java:333)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ create TABLE transaksi(
+	noTrans int not null unique,
+	tgl date,
+	username String(50),
+constraint pk_transaksi primary key(no_transaksi),
+constraint fk_transaksi_users foreign key(username) references users (username)
+) ]
+
+]
+[ TIME: Wed Jan 07 22:25:57 ICT 2015 ]
+% com.mckoi.database.DatabaseException: Column 'no_transaksi' not found the table.
+	at com.mckoi.database.interpret.ColumnChecker.checkColumnList(ColumnChecker.java:128)
+	at com.mckoi.database.interpret.CreateTable.prepare(CreateTable.java:333)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ create TABLE transaksi 
+(
+	noTransaksi int NOT NULL UNIQUE,
+	tanggal date,
+	username STRING(20),
+	constraint pk_transaksi primary key(noTransaksi),
+	constraint fk_transaksi_users foreign key(username) references users(username)
+) ]
+
+]
+[ TIME: Wed Jan 07 22:27:33 ICT 2015 ]
+% com.mckoi.database.DatabaseException: Referenced table 'APP.users' in constraint 'fk_transaksi_users' does not exist.
+	at com.mckoi.database.interpret.CreateTable.prepare(CreateTable.java:324)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ create TABLE transaksi(
+	noTransaksi int NOT NULL UNIQUE,
+	tanggal date,
+	username STRING(20),
+	constraint pk_transaksi primary key(noTransaksi),
+	constraint fk_transaksi_users foreign key(username) references users(username)
+) ]
+
+]
+[ TIME: Wed Jan 07 22:27:54 ICT 2015 ]
+% com.mckoi.database.DatabaseException: Referenced table 'APP.users' in constraint 'fk_transaksi_users' does not exist.
+	at com.mckoi.database.interpret.CreateTable.prepare(CreateTable.java:324)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ create TABLE transaksi(
+	noTransaksi int NOT NULL UNIQUE,
+	tanggal date,
+	username STRING(20),
+	constraint pk_transaksi primary key(noTransaksi),
+	constraint fk_transaksi_users foreign key(username) references Users(username)
+) ]
+
+]
+[ TIME: Wed Jan 07 22:28:11 ICT 2015 ]
+% com.mckoi.database.DatabaseException: Table 'APP.transaksi' already exists.
+	at com.mckoi.database.interpret.CreateTable.evaluate(CreateTable.java:391)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:147)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ create TABLE product(
+	id_product String(20)not null unique,
+	nama_product String(50),
+	idSupp String(20),
+	harga int,
+	stok int,
+constraint pk_produk primary key(id),
+constraint fk_produk_supplier foreign key(idSupp) references supplier (idSupp)
+) ]
+
+]
+[ TIME: Wed Jan 07 22:28:34 ICT 2015 ]
+% com.mckoi.database.DatabaseException: Column 'id' not found the table.
+	at com.mckoi.database.interpret.ColumnChecker.checkColumnList(ColumnChecker.java:128)
+	at com.mckoi.database.interpret.CreateTable.prepare(CreateTable.java:333)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ create TABLE product(
+	id_product String(20)not null unique,
+	nama_product String(50),
+	idSupp String(20),
+	harga int,
+	stok int,
+constraint pk_produk primary key(id_product),
+constraint fk_produk_supplier foreign key(idSupp) references supplier (idSupp)
+) ]
+
+]
+[ TIME: Wed Jan 07 22:29:15 ICT 2015 ]
+% com.mckoi.database.DatabaseException: Table 'APP.product' already exists.
+	at com.mckoi.database.interpret.CreateTable.evaluate(CreateTable.java:391)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:147)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+[ TIME: Wed Jan 07 22:33:19 ICT 2015 ]
+% com.mckoi.database.sql.ParseException: Encountered "<EOF>" at line 7, column 83.
+Was expecting one of:
+    "on" ...
+    "initially" ...
+    "deferrable" ...
+    "not" ...
+    ")" ...
+    "," ...
+    
+	at com.mckoi.database.sql.SQL.generateParseException(SQL.java:6070)
+	at com.mckoi.database.sql.SQL.jj_consume_token(SQL.java:5939)
+	at com.mckoi.database.sql.SQL.ColumnDeclarationList(SQL.java:2326)
+	at com.mckoi.database.sql.SQL.CreateTable(SQL.java:455)
+	at com.mckoi.database.sql.SQL.Create(SQL.java:238)
+	at com.mckoi.database.sql.SQL.Statement(SQL.java:174)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:94)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+[ TIME: Wed Jan 07 22:33:55 ICT 2015 ]
+% com.mckoi.database.sql.ParseException: Encountered "<EOF>" at line 7, column 91.
+Was expecting one of:
+    "on" ...
+    "initially" ...
+    "deferrable" ...
+    "not" ...
+    ")" ...
+    "," ...
+    
+	at com.mckoi.database.sql.SQL.generateParseException(SQL.java:6070)
+	at com.mckoi.database.sql.SQL.jj_consume_token(SQL.java:5939)
+	at com.mckoi.database.sql.SQL.ColumnDeclarationList(SQL.java:2326)
+	at com.mckoi.database.sql.SQL.CreateTable(SQL.java:455)
+	at com.mckoi.database.sql.SQL.Create(SQL.java:238)
+	at com.mckoi.database.sql.SQL.Statement(SQL.java:174)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:94)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ create TABLE detilTransaksi(
+	noTransaksi int,
+	id_detTrans String(20),
+	kuantitas int,	
+constraint pk_detilTransaksi primary key(noTransaksi,id),
+constraint fk_detilTransaksi_transaksi foreign key(no_transaksi) references transaksi (no_transaksi),
+constraint fk_detilTransaksi_produk foreign key(id_detTrans)references product (id_product)
+) ]
+
+]
+[ TIME: Wed Jan 07 22:34:06 ICT 2015 ]
+% com.mckoi.database.DatabaseException: Column 'id' not found the table.
+	at com.mckoi.database.interpret.ColumnChecker.checkColumnList(ColumnChecker.java:128)
+	at com.mckoi.database.interpret.CreateTable.prepare(CreateTable.java:333)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+[ TIME: Wed Jan 07 22:34:33 ICT 2015 ]
+% com.mckoi.database.sql.ParseException: Encountered "-" at line 5, column 56.
+Was expecting one of:
+    ")" ...
+    "," ...
+    
+	at com.mckoi.database.sql.SQL.generateParseException(SQL.java:6070)
+	at com.mckoi.database.sql.SQL.jj_consume_token(SQL.java:5939)
+	at com.mckoi.database.sql.SQL.TableConstraintDefinition(SQL.java:2896)
+	at com.mckoi.database.sql.SQL.ColumnOrConstraintDefinition(SQL.java:2354)
+	at com.mckoi.database.sql.SQL.ColumnDeclarationList(SQL.java:2324)
+	at com.mckoi.database.sql.SQL.CreateTable(SQL.java:455)
+	at com.mckoi.database.sql.SQL.Create(SQL.java:238)
+	at com.mckoi.database.sql.SQL.Statement(SQL.java:174)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:94)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ create TABLE detilTransaksi(
+	noTransaksi int,
+	id_detTrans String(20),
+	kuantitas int,	
+constraint pk_detilTransaksi primary key(noTransaksi,id_product),
+constraint fk_detilTransaksi_transaksi foreign key(no_transaksi) references transaksi (no_transaksi),
+constraint fk_detilTransaksi_produk foreign key(id_detTrans)references product (id_product)
+) ]
+
+]
+[ TIME: Wed Jan 07 22:35:43 ICT 2015 ]
+% com.mckoi.database.DatabaseException: Column 'id_product' not found the table.
+	at com.mckoi.database.interpret.ColumnChecker.checkColumnList(ColumnChecker.java:128)
+	at com.mckoi.database.interpret.CreateTable.prepare(CreateTable.java:333)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ create TABLE detilTransaksi(
+	noTransaksi int,
+	id_detTrans String(20),
+	kuantitas int,	
+constraint pk_detilTransaksi primary key(noTransaksi,id_detTrans),
+constraint fk_detilTransaksi_transaksi foreign key(no_transaksi) references transaksi (no_transaksi),
+constraint fk_detilTransaksi_produk foreign key(id_detTrans)references product (id_product)
+) ]
+
+]
+[ TIME: Wed Jan 07 22:36:32 ICT 2015 ]
+% com.mckoi.database.DatabaseException: Column 'no_transaksi' not found
+	at com.mckoi.database.DataTableDef.resolveColumnName(DataTableDef.java:183)
+	at com.mckoi.database.DataTableDef.resolveColumnsInArray(DataTableDef.java:197)
+	at com.mckoi.database.interpret.CreateTable.prepare(CreateTable.java:329)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ create TABLE detilTransaksi(
+	noTransaksi int,
+	id_detTrans String(20),
+	kuantitas int,	
+constraint pk_detilTransaksi primary key(noTransaksi,id_detTrans),
+constraint fk_detilTransaksi_transaksi foreign key(no_transaksi) references transaksi (no_transaksi),
+constraint fk_detilTransaksi_produk foreign key(id_detTrans)references product (id_product)
+) ]
+
+]
+[ TIME: Wed Jan 07 22:36:35 ICT 2015 ]
+% com.mckoi.database.DatabaseException: Column 'no_transaksi' not found
+	at com.mckoi.database.DataTableDef.resolveColumnName(DataTableDef.java:183)
+	at com.mckoi.database.DataTableDef.resolveColumnsInArray(DataTableDef.java:197)
+	at com.mckoi.database.interpret.CreateTable.prepare(CreateTable.java:329)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ create TABLE detilTransaksi(
+	noTransaksi int,
+	id_detTrans String(20),
+	kuantitas int,	
+constraint pk_detilTransaksi primary key(noTransaksi,id_detTrans),
+constraint fk_detilTransaksi_transaksi foreign key(noTransaksi) references transaksi (noTransaksi),
+constraint fk_detilTransaksi_produk foreign key(id_detTrans)references product (id_product)
+) ]
+
+]
+[ TIME: Wed Jan 07 22:37:29 ICT 2015 ]
+% com.mckoi.database.DatabaseException: Table 'APP.detilTransaksi' already exists.
+	at com.mckoi.database.interpret.CreateTable.evaluate(CreateTable.java:391)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:147)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ create TABLE detilTransaksi(
+	noTransaksi int,
+	id_detTrans String(20),
+	kuantitas int,	
+constraint pk_detilTransaksi primary key(noTransaksi,id_detTrans),
+constraint fk_detilTransaksi_transaksi foreign key(noTransaksi) references transaksi (noTransaksi),
+constraint fk_detilTransaksi_produk foreign key(id_detTrans)references product (id_product)
+) ]
+
+]
+[ TIME: Wed Jan 07 22:37:42 ICT 2015 ]
+% com.mckoi.database.DatabaseException: Table 'APP.detilTransaksi' already exists.
+	at com.mckoi.database.interpret.CreateTable.evaluate(CreateTable.java:391)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:147)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO supplier (IdSupp, nama) VALUES
+('ABE', 'Al Biruni Herbals'),
+('ABH', 'Al Banari Herbals'),
+('ABK', 'Al Barokah'),
+('ADP', 'Ad Dawa'' Product'),
+('ADR', 'Addawa Research'),
+('AFH', 'Afiah'),
+('AHZ', 'Al Hijaz'),
+('AID', 'Naturaid'),
+('AIN', 'Adas Indo Nusa'),
+('ALA', 'Al Amir (Spain)'),
+('ALW', 'Al - Waliy'),
+('ASM', 'Agaricus Sido Makmur Sentosa'),
+('ASS', 'Assabil Aminfood'),
+('DOK', 'Pondok Herbal'),
+('DRA', 'CV. Samudra'),
+('EOH', 'Neoherba Nusantara'),
+('ETA', 'EtalaseMuslim.com'),
+('FIH', 'Fita Herba'),
+('FSA', 'Al-Afiat Sehat Alami'),
+('GHE', 'Ghaza Herbal (Kerunia Alam)'),
+('GHU', 'Al-Ghuroba'''),
+('GIC', 'Magic Star'),
+('H99', 'HerbaCare 99'),
+('HEF', 'Herba Farma'),
+('HEM', 'Herba Medika'),
+('HFI', 'Herbafit'),
+('HIN', 'Citra Herba Insani'),
+('HIS', 'Herbal Inti Sehat'),
+('HIU', 'Herbal Indo Utama'),
+('HPN', 'El Hanif Putra Nusantara'),
+('IMA', 'El-Iman'),
+('KHO', 'Al Khodry'),
+('KIA', 'Al Kautsar Inti ''Afiyah'),
+('MAB', 'Assalaamah Mabruuk'),
+('MB', 'Al-Mabruroh By. Serba Alam'),
+('MEN', 'Madu Herba Nusantara'),
+('MHE', 'Al Manar Herbafit'),
+('MUS', 'Al Muslim'),
+('NAH', 'CV. Nature Herb'),
+('OIF', 'Ath Thoifah'),
+('QOW', 'Al-Qowam'),
+('QUB', 'Al-Qubro Indonesia'),
+('ROB', 'Arobiyan Herbal'),
+('SAL', 'As Salaamah'),
+('SAM', 'CV. Sambung Nyowo'),
+('SFI', 'Al Shifa (PT. Safarindo Internusa)'),
+('SHI', 'Ash-Shihhah Herbal'),
+('SYI', 'CV. Syifa Herbal Alami'),
+('UIA', 'Madu Indo Alam'),
+('USY', 'Nurusy Syifa'),
+('VER', 'CV. Vermindo Internasional Afiah'),
+('VIC', 'CV. Vicomas Internasional'),
+('WAD', 'Mawaddah - DIY'),
+('WDY', 'Al Wadey'); ]
+
+]
+[ TIME: Wed Jan 07 22:39:07 ICT 2015 ]
+% com.mckoi.database.StatementException: Can't find column: IdSupp
+	at com.mckoi.database.interpret.Statement.resolveColumn(Statement.java:226)
+	at com.mckoi.database.interpret.Insert.prepare(Insert.java:153)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO product (id_Product, nama_product, idSupp, harga, stok) VALUES
+
+('ABE007', 'Albibet Al Biruni (Diabetes/Kencing Manis)', 'ABE', 59000,100),
+('ABE008', 'AlbiKoles Al Biruni (Kolesterol)', 'ABE', 59000,100),
+('ABE009', 'Albimor Al Biruni (Membunuh Kanker dan Tumor)', 'ABE', 73000,100),
+('ABE010', 'Albirmaag/Herba Maag 50K Al Biruni', 'ABE', 59000,100),
+('ABE011', 'Albistrok (Membantu Memulihkan Stroke)', 'ABE', 73000,100),
+('ABE012', 'Bloody Cleanser Al Biruni (Detoksifikasi Racun Tub', 'ABE', 80000,100),
+('ABE013', 'Cing Cing Al Biruni (thypus, demam tinggi, stroke,', 'ABE', 80000,100),
+('ABE014', 'Herba Gurah Jumbo Al Biruni / Albiguraa Jumbo', 'ABE', 59000,100),
+('ABE015', 'Herba Gurah Pot Al Biruni (Albiguraa 18 Kapsul)', 'ABE', 31000,100),
+('ABE016', 'Herba Gurah Reguler Al Biruni (Albiguraa 25 kapsul', 'ABE', 36000,100),
+('ABE017', 'Herba Gurah Yunior Al Biruni (Albirugaa Untuk Anak', 'ABE', 36000,100),
+('ABE018', 'Herba Maag / AlbirMag Al Biruni', 'ABE', 36000,100),
+('ABE019', 'HerbaSam 50K Al Biruni', 'ABE', 59000,100),
+('ABE020', 'HerbaSlim Al Biruni', 'ABE', 59000,100),
+('ABE021', 'HerbaTensi Al Biruni (Hipertensi/Darah Tinggi)', 'ABE', 59000,100),
+
+('ABH004', 'SuburKand 1', 'ABH', 59000,100),
+('ABH005', 'SuburKand 2', 'ABH', 59000,100),
+
+('ABK006', 'Jamu Madu Habbatussauda Al-Barokah (Quality has a ', 'ABK', 100000,100),
+
+('ADP001', 'Kapsul Minyak Ikan Salmon isi 50 Softgel', 'ADP', 40000,100),
+('ADP002', 'Kapsul Serbuk Ashitaba Herbal (Seledri Jepang)', 'ADP', 40000,100),
+
+('ADR001', 'Madu Kaliandra 300 ml Addawa', 'ADR', 43000,100),
+('ADR002', 'Madu Kaliandra 700 ml Addawa', 'ADR', 77000,100),
+('ADR003', 'Madu Randu 1 Kg Addawa', 'ADR', 100000,100),
+
+('AFH004', 'Bedak Dingin Sari Bengkoang', 'AFH', 12000,100),
+('AFH005', 'Minyak Bulus Asli Kalimantan Kemasan Roll On', 'AFH', 15000,100),
+
+('AHZ022', 'Kapsul Minyak Habbatussauda'' Al Hijaz Isi 100', 'AHZ', 60000,100),
+('AHZ023', 'Kapsul Minyak Habbatussauda'' Al Hijaz Isi 200', 'AHZ', 110000,100),
+('AHZ024', 'Kapsul Minyak Habbatussauda'' Al Hijaz Isi 60', 'AHZ', 40000,100),
+
+('AID624', 'Madu Muwallad 175 gram', 'AID', 35000,100),
+('AID625', 'Madu Muwallad 375 gram', 'AID', 65000,100),
+('AID626', 'MiGa Zaitun Plus', 'AID', 22500,100),
+('AID627', 'Minyak Sawaan', 'AID', 20000,100),
+('AID628', 'Obat Tetes THM (Telinga Hidung Mata)', 'AID', 15000,100),
+('AID629', 'OTEM (Obat Tetes Mata)', 'AID', 25000,100),
+('AID630', 'PiCi (Power Cleanser) 50 Kapsul', 'AID', 35000,100),
+('AID631', 'PiCi (Power Cleanser) 75 Kapsul', 'AID', 70000,100),
+('AID632', 'Tabkir Naturaid (Khusus Wanita)', 'AID', 23000,100),
+('AID633', 'Zait Sauda''', 'AID', 20000,100),
+('AID634', 'Zulu Madu (Masker, Lulur dan Pasta Gigi)', 'AID', 25000,100),
+('AID635', 'Zulu Natural (Bedak, Masker dan Lulur)', 'AID', 25000,100),
+
+('AIN001', 'KAMIL 3 in 1 (Habbatussauda, Zaitun, Propolis) 70 ', 'AIN', 50000,100),
+('AIN002', 'kamil 3 in 1 isi 200 kapsul', 'AIN', 95000,100),
+('AIN003', 'Kapsul Minyak Habbatussauda'' Kamil isi 70', 'AIN', 45000,100),
+('AIN004', 'Kapsul Minyak Ikan KAMIL (Fish Oil + Omega 3)', 'AIN', 90000,100),
+('AIN005', 'Kapsul Minyak Zaitun KAMIL isi 70', 'AIN', 40000,100),
+('AIN006', 'Kapsul Serbuk Kamil Habbatussauda 70 Kapsul', 'AIN', 25000,100),
+('AIN007', 'Minyak Zaitun KAMIL 100 ml', 'AIN', 25000,100),
+
+('ALA002', 'Minyak Zaitun Al Amir 175 ml (Import)', 'ALA', 40000,100),
+('ALA003', 'Minyak Zaitun Extra Virgin Al Amir 250 ml', 'ALA', 60000,100),
+
+('ALW001', 'STOP Ngompol For Kids Al - Waliy', 'ALW', 25000,100),
+('ALW007', 'Madu Amandel For Kids Al - Waliy', 'ALW', 30000,100),
+('ALW008', 'Madu Batuk Dewasa Al - Waliy', 'ALW', 25000,100),
+('ALW009', 'Madu Batuk For Kids Al - Waliy', 'ALW', 25000,100),
+
+('ASM006', 'Agadro NODIBET', 'ASM', 120000,100),
+
+('ASS062', 'Talbinah 200 gram Aminfood', 'ASS', 20000,100),
+('ASS063', 'Talbinah 400 gram Aminfood', 'ASS', 40000,100),
+
+('DOK676', 'Habbatuna (Minyak Habatussauda + Zaitun Tursina)', 'DOK', 35000,100),
+('DOK677', 'Habbatussauda'' Nigela Sativa Super 100 Kapsul', 'DOK', 20000,100),
+('DOK678', 'Habbatussauda'' Nigela Sativa Super 200 Kapsul', 'DOK', 40000,100),
+('DOK679', 'Habbatussauda'' Nigela Sativa Super 50 Kapsul', 'DOK', 13000,100),
+('DOK680', 'Kapsul Minyak Habbatussauda'' Habasy Isi 100 (Pondo', 'DOK', 55000,100),
+('DOK681', 'Kapsul Minyak Habbatussauda'' Habasy Isi 200 (Pondo', 'DOK', 105000,100),
+('DOK682', 'Kapsul Minyak Habbatussauda'' Habasy Isi 50  (Pondo', 'DOK', 35000,100),
+('DOK683', 'Kapsul Minyak Zaitun Tursina Isi 50', 'DOK', 25000,100),
+('DOK684', 'Madu Anak Cerdas (Madu + Zaitun + Habbatussauda'' +', 'DOK', 20000,100),
+('DOK685', 'Madu Anak Cerdas Plus Propolis Ajaban', 'DOK', 22000,100),
+('DOK686', 'Madu Hutan Super An Nahl (+ Bee Pollen dan Royal J', 'DOK', 40000,100),
+('DOK687', 'Madu Hutan Super An Nahl (+ Bee Pollen dan Royal J', 'DOK', 75000,100),
+('DOK688', 'Mazidun 6 in 1 (Madu + Zaitun + Habbatussauda'' + J', 'DOK', 45000,100),
+('DOK689', 'Obat Herbal Purwoceng 100%', 'DOK', 25000,100),
+('DOK690', 'Rosella Mesir 100 gram', 'DOK', 28000,100),
+('DOK691', 'Sari Kurma Madinah 350 gram', 'DOK', 45000,100),
+('DOK692', 'Terapi Herba Susut Alami', 'DOK', 40000,100),
+
+('DRA088', 'Sabun Mandi Padat Antiseptik POMPIA Olive Oil', 'DRA', 7500,100),
+('DRA089', 'Sabun Mandi SERE POMPIA Aroma Melon', 'DRA', 7500,100),
+('DRA090', 'Sabun Mandi SERE POMPIA Aroma Strawberry', 'DRA', 7500,100),
+('DRA091', 'Sabun Olive Oil POMPIA Aroma Chocolate', 'DRA', 8000,100),
+('DRA092', 'Sabun Wangi Sereh SANDO', 'DRA', 6000,100),
+
+('EOH636', 'BEAUTY-UP (Pueraria Mirifica Extract) Pembesar Pay', 'EOH', 125000,100),
+('EOH637', 'Bee Propolis 25 Tablet @ 250 mg', 'EOH', 35000,100),
+('EOH638', 'Bee Propolis 50 Tablet @ 250 mg', 'EOH', 65000,100),
+('EOH639', 'Blackseed Soya (Instan Kedelai Bubuk plus Habbatus', 'EOH', 27500,100),
+('EOH640', 'Kid''s Soya (Sari Kedelai Instan untuk Anak)', 'EOH', 27000,100),
+('EOH641', 'LaxiFit (Gurah Perut Neocleanser Baru)', 'EOH', 35000,100),
+('EOH642', 'MAMA SOYA (Bubuk instant kedelai plus daun katuk,d', 'EOH', 28000,100),
+('EOH643', 'Minyak Zaitun Extra Virgin Palestine 100 ml', 'EOH', 28000,100),
+('EOH644', 'Minyak Zaitun Extra Virgin Palestine 30 ml', 'EOH', 11000,100),
+('EOH645', 'Minyak Zaitun Extra Virgin Palestine 60 ml', 'EOH', 19000,100),
+('EOH646', 'Neo Propolis 50 Kapsul', 'EOH', 80000,100),
+('EOH647', 'Shampo Zaitun NeoHerba', 'EOH', 22000,100),
+('EOH648', 'Zeston (khusus pria dewasa sudah beristri)', 'EOH', 45000,100),
+
+('ETA146', 'Daun Jati Belanda Kering 100 gram', 'ETA', 12000,100),
+('ETA147', 'Daun Jati Cina Curah 90 gram', 'ETA', 15000,100),
+('ETA148', 'Sarang Semut Papua Curah 100 Gram', 'ETA', 35000,100),
+('ETA149', 'Serbuk Daun Bidara 250 gram (curah)', 'ETA', 80000,100),
+('ETA150', 'Teh Rosella 100 gram (Kuntum Bunga Rosella Kering)', 'ETA', 27000,100),
+
+('FIH151', 'Cream Fyra Gamat plus Royal Jelly', 'FIH', 30000,100),
+('FIH152', 'Cream Fyra Zaitun plus Royal Jelly', 'FIH', 30000,100),
+('FIH153', 'Fyra Cream Propolis dan Royal Jelly', 'FIH', 30000,100),
+('FIH154', 'Fyra Sabun Wajah Aloevera', 'FIH', 8000,100),
+('FIH155', 'Fyra Sabun Wajah Alpukat', 'FIH', 8000,100),
+('FIH156', 'Fyra Sabun Wajah Blackseed', 'FIH', 8000,100),
+('FIH157', 'Fyra Sabun Wajah Gamat', 'FIH', 8000,100),
+('FIH158', 'Fyra Sabun Wajah Goat Milk', 'FIH', 8000,100),
+('FIH159', 'Fyra Sabun Wajah Kopi', 'FIH', 8000,100),
+('FIH160', 'Fyra Sabun Wajah Mentimun', 'FIH', 8000,100),
+('FIH161', 'Fyra Sabun Wajah Pepaya', 'FIH', 8000,100),
+('FIH162', 'Fyra Sabun Wajah Propolis', 'FIH', 8000,100),
+('FIH163', 'Fyra Sabun Wajah Zaitun', 'FIH', 8000,100),
+('FIH164', 'Sabun Mandi Therapy Soap Daun Bidara Extra Habbatu', 'FIH', 6000,100),
+('FIH165', 'Sabun Mandi Therapy Soap Sedap Wangi', 'FIH', 6000,100),
+
+('FSA081', 'Madu Bugar Kunyit Asam Al-Afiat', 'FSA', 30000,100),
+('FSA082', 'Madu Bugar Rosella Manggis Al-Afiat', 'FSA', 40000,100),
+('FSA083', 'Sirup Gurah Anak dan Dewasa Rasa MINT 75 ml', 'FSA', 30000,100),
+('FSA084', 'Sirup Gurah untuk Anak dan Dewasa 125 ml', 'FSA', 50000,100),
+('FSA085', 'Sirup Gurah untuk Anak dan Dewasa 75 ml', 'FSA', 30000,100),
+('FSA086', 'Sirup Gurah Untuk Anak dan Dewasa Rasa MINT 125 ml', 'FSA', 50000,100),
+
+('GHE166', 'Madu Alang-alang (Anti Hepatitic)', 'GHE', 45000,100),
+('GHE167', 'Madu Anti Asam Urat', 'GHE', 45000,100),
+('GHE168', 'Madu Anti Diare', 'GHE', 45000,100),
+('GHE169', 'Madu Anti Hamil (Spesial Kontrasepsi Pria)', 'GHE', 45000,100),
+('GHE170', 'Madu Anti Nyeri Otot', 'GHE', 45000,100),
+('GHE171', 'Madu Anti Wasir', 'GHE', 45000,100),
+('GHE172', 'Madu Asma & Sinusitis', 'GHE', 45000,100),
+('GHE173', 'Madu Cinta Ghaza Herbal', 'GHE', 45000,100),
+('GHE174', 'Madu Daun Sirsak', 'GHE', 45000,100),
+('GHE175', 'Madu Fantastic Four (4 in 1)', 'GHE', 45000,100),
+('GHE176', 'Madu Gadung Cina Anti Rematik', 'GHE', 45000,100),
+('GHE177', 'Madu Hamil dan Menyusui Ghaza Herbal', 'GHE', 45000,100),
+('GHE178', 'Madu Jelly Gamat Gold Ghaza Herbal', 'GHE', 45000,100),
+('GHE179', 'Madu Keji Beling (Peluruh Batu Ginjal)', 'GHE', 45000,100),
+('GHE180', 'Madu Keladi Tikus Ghaza Herbal', 'GHE', 45000,100),
+('GHE181', 'Madu Malam Jumat', 'GHE', 45000,100),
+('GHE182', 'Madu Pasca Bersalin', 'GHE', 45000,100),
+('GHE183', 'Madu Penghilang Bau Badan', 'GHE', 45000,100),
+('GHE184', 'Madu Penghilang Nyeri Haid', 'GHE', 45000,100),
+('GHE185', 'Madu Penurun Demam', 'GHE', 45000,100),
+('GHE186', 'Madu Penyubur Kandungan Ghaza Herbal', 'GHE', 45000,100),
+('GHE187', 'Madu Prostat', 'GHE', 45000,100),
+('GHE188', 'Madu Rapet Wangi', 'GHE', 45000,100),
+('GHE189', 'Madu Rumput Mutiara (Anti Jerawat)', 'GHE', 45000,100),
+('GHE190', 'Madu Sarang Semut Ghaza Herbal', 'GHE', 45000,100),
+('GHE191', 'Madu Seledri (Anti Hipertensi)', 'GHE', 45000,100),
+('GHE192', 'Madu Special Batuk dan Sariawan', 'GHE', 45000,100),
+('GHE193', 'Madu Special Cacingan dan Nafsu Makan', 'GHE', 45000,100),
+('GHE194', 'Madu Spirulina Ghaza Herbal', 'GHE', 45000,100),
+('GHE195', 'Madu Tapak Liman (Anti Radang)', 'GHE', 45000,100),
+('GHE196', 'Minyak Habbatussauda'' 100 ml Ghaza Herbal', 'GHE', 60000,100),
+('GHE197', 'Minyak Habbatussauda'' 30 ml Ghaza Herbal', 'GHE', 25000,100),
+('GHE198', 'Minyak Zaitun Extra Virgin 100 Kapsul Ghaza Herbal', 'GHE', 35000,100),
+('GHE199', 'Minyak Zaitun Extra Virgin 200 Kapsul Ghaza Herbal', 'GHE', 65000,100),
+('GHE200', 'Minyak Zaitun Extra Virgin Ghaza Herbal 140 ml', 'GHE', 30000,100),
+('GHE201', 'Minyak Zaitun Extra Virgin Ghaza Herbal 60 ml', 'GHE', 15000,100),
+
+('GHU001', 'Madu Hutan Belantara Riau Al-Ghuroba'' 1 kg', 'GHU', 78000,100),
+('GHU002', 'Madu Hutan Kalimantan al-Ghuroba'' 0,5 kg', 'GHU', 43000,100),
+('GHU003', 'Madu Hutan Kalimantan Al-Ghuroba'' 1 kg', 'GHU', 63000,100),
+('GHU004', 'Minyak Angin 25 ml', 'GHU', 10000,100),
+('GHU005', 'Minyak Cengkih 25 ml', 'GHU', 20000,100),
+('GHU006', 'Minyak Gondopuro 25 ml', 'GHU', 12000,100),
+('GHU007', 'Minyak Habbatusauda'' 30 ml (Black Seed Oil)', 'GHU', 25000,100),
+('GHU008', 'Minyak Habbatussauda'' 60 ml (Black Seed Oil)', 'GHU', 40000,100),
+('GHU009', 'Minyak Kayu Putih Al Ghuroba'' 150 ml', 'GHU', 50000,100),
+('GHU010', 'Minyak Sereh 25 ml', 'GHU', 20000,100),
+('GHU011', 'Minyak Zaitun Extra Virgin al-Ghuroba'' 60 ml', 'GHU', 20000,100),
+('GHU012', 'Sabun Herbal Bunga Melati Al Ghuroba''', 'GHU', 7500,100),
+('GHU013', 'Sabun Herbal Sirih Al Ghuroba''', 'GHU', 7500,100),
+('GHU014', 'Sari Kurma Mumtaz', 'GHU', 35000,100),
+('GHU015', 'Syifa'' Fit 250 gr (Madu + Zaitun + Habbatussauda +', 'GHU', 42000,100),
+('GHU016', 'Syifa'' Fit Kapsul Al-Ghuroba'' (Madu + Habbatussuda', 'GHU', 40000,100),
+('GHU087', 'Al Mu''arris 250 gr (Madu+Zaitun+Habbatussauda+Herb', 'GHU', 45000,100),
+('GHU088', 'Cream Zaitun Al-Ghuroba''', 'GHU', 16000,100),
+('GHU089', 'Kapsul Bee Pollen Al Ghuroba', 'GHU', 35000,100),
+('GHU090', 'Madu Alami Ad_Dawa'' Bunga Kelengkeng 0.5 kg Al Ghu', 'GHU', 48000,100),
+('GHU091', 'Madu Alami Ad-Dawa'' Bunga Kelengkeng 1 kg Al Ghuro', 'GHU', 80000,100),
+('GHU092', 'Madu Alami Ad-Dawa'' Bunga Mangga 0,5 kg Al Ghuroba', 'GHU', 45000,100),
+('GHU093', 'Madu Alami Ad-Dawa'' Bunga Mangga 1 kg Al Ghuroba', 'GHU', 75000,100),
+('GHU094', 'Madu Alami Al-Lu''Lu'' Bunga Kopi 0,5 kg Al Ghuroba', 'GHU', 48000,100),
+('GHU095', 'Madu Alami Al-Lu''Lu'' Bunga Kopi 1 kg Al Ghuroba', 'GHU', 80000,100),
+('GHU096', 'Madu Alami Salsabila Bunga Randu 0,5 kg Al Ghuroba', 'GHU', 45000,100),
+('GHU097', 'Madu Alami Salsabila Bunga Randu 1 kg Al Ghuroba', 'GHU', 75000,100),
+('GHU098', 'Madu Clever Child', 'GHU', 32000,100),
+('GHU099', 'Madu Hutan Belantara Riau al-Ghuroba'' 0,5 kg', 'GHU', 48000,100),
+
+('GIC606', 'Jarum Bekam 21G isi 200 Magic Star (kotak kuning)', 'GIC', 115000,100),
+('GIC607', 'Jarum Bekam 21G isi 200 Magic Star Reguler', 'GIC', 70000,100),
+('GIC608', 'Jarum Bekam 28G isi 100 Magic Star', 'GIC', 35000,100),
+('GIC609', 'Jarum Bekam 28G isi 200 Magic Star', 'GIC', 70000,100),
+('GIC610', 'Lancing Device Plastic Autoklik Magic Star', 'GIC', 60000,100),
+('GIC611', 'Lancing Device Stainless Steel Automatic Magic Sta', 'GIC', 140000,100),
+
+('H99420', 'Graptolin (Kapsul Daun Ungu)', 'H99', 40000,100),
+('H99421', 'X Zatiron Serbuk 3 in 1 (Stamina, Vitalitas)', 'H99', 50000,100),
+('H99422', 'X Zatiron Tribulus Terrestris Capsule (Stamina, Vi', 'H99', 50000,100),
+
+('HEF398', 'Beauty Booster Plus Pueraria Mirifica Cream (Peraw', 'HEF', 150000,100),
+('HEF399', 'LAYLA Cream (Penghilang Bekas Luka, Pemutih Ketiak', 'HEF', 35000,100),
+('HEF400', 'Minyak Bulus BIO OIL', 'HEF', 25000,100),
+('HEF401', 'Morinda Cream plus Tabir Surya', 'HEF', 35000,100),
+('HEF402', 'NAYLA Gamat & Royal Jelly Regenerating Cream (NRC)', 'HEF', 35000,100),
+('HEF403', 'NAYLA Gamat Facial Soap 70 ml', 'HEF', 25000,100),
+
+('HEM404', 'Extract Oil Habbasauda + Garlic isi 60 Kapsul', 'HEM', 35000,100),
+('HEM405', 'Extract Oil Habbasauda + Kemangi', 'HEM', 35000,100),
+('HEM406', 'Extract Oil Habbasauda + Kunyit', 'HEM', 35000,100),
+('HEM407', 'Extract Oil Habbasauda + Mengkudu', 'HEM', 35000,100),
+('HEM408', 'Extract Oil Habbasauda + Mimba', 'HEM', 35000,100),
+('HEM409', 'Extract Oil Habbasauda + Propolis isi 200 Kapsul', 'HEM', 90000,100),
+('HEM410', 'Extract Oil Habbasauda + Propolis isi 60 Kapsul', 'HEM', 35000,100),
+('HEM411', 'Extract Oil Habbasauda + Sambiloto', 'HEM', 35000,100),
+('HEM412', 'Extract Oil Habbasauda + Seledri', 'HEM', 35000,100),
+('HEM413', 'Extract Oil Habbasauda + Sirih Merah', 'HEM', 35000,100),
+('HEM414', 'Extract Oil Habbasauda + Sirsak isi 200 kapsul', 'HEM', 90000,100),
+('HEM415', 'Extract Oil Habbasauda + Sirsak isi 60 Kapsul', 'HEM', 35000,100),
+('HEM416', 'Extract Oil Habbasauda + Temulawak', 'HEM', 35000,100),
+('HEM417', 'Extract Oil Habbasauda + Zaitun isi 60 Kapsul', 'HEM', 25000,100),
+('HEM418', 'Extract Oil Habbassauda + Garlic isi 200 Kapsul', 'HEM', 85000,100),
+('HEM419', 'Extract Oil Habbatussauda + Zaitun isi 200 Kapsul', 'HEM', 80000,100),
+
+('HFI423', 'BIDARASAUDA Herbafit', 'HFI', 45000,100),
+('HFI424', 'FITENSI (Meringankan Tekanan Darah)', 'HFI', 45000,100),
+('HFI425', 'GURAFIT Kapsul Gurah Jumbo Herbafit', 'HFI', 45000,100),
+('HFI426', 'Gurah Anak Herbafit', 'HFI', 20000,100),
+('HFI427', 'Gurah Mint Herbafit', 'HFI', 30000,100),
+('HFI428', 'HERBABET / Obat Diabetes Herbafit', 'HFI', 45000,100),
+('HFI429', 'Herbamax Herbafit (Khusus Suami)', 'HFI', 40000,100),
+('HFI430', 'Herba-V Herbafit', 'HFI', 45000,100),
+('HFI431', 'Kapsul Asam Urat Herbafit', 'HFI', 45000,100),
+('HFI432', 'Kapsul Gurah Pot Herbafit', 'HFI', 15000,100),
+('HFI433', 'Obat Kanker Herbafit', 'HFI', 45000,100),
+('HFI434', 'Pelangsing Herbafit', 'HFI', 35000,100),
+('HFI435', 'STOPMAA / Obat Maag Herbafit', 'HFI', 45000,100),
+
+('HIN001', 'Guratic (Meredakan Pegal Linu)', 'HIN', 50000,100),
+('HIN002', 'Kapsul Herba Setamol (Membantu Meredakan Demam)', 'HIN', 45000,100),
+('HIN003', 'Kemofit (untuk Penderita Kanker)', 'HIN', 50000,100),
+('HIN004', 'Lulur Harum Malam', 'HIN', 15000,100),
+('HIN005', 'MilkCo Oatmeal Instant Jahe Alami', 'HIN', 50000,100),
+('HIN006', 'MilkCo Oatmeal Instant Natural', 'HIN', 50000,100),
+('HIN007', 'Minuman Instan Anak Hebat Coklat', 'HIN', 30000,100),
+('HIN008', 'Minuman Instan Anak Hebat Plus Madu', 'HIN', 30000,100),
+('HIN009', 'Minuman Instan Anak Hebat Strawberry', 'HIN', 30000,100),
+('HIN010', 'Param kencur (Meredakan Pegal Linu dan Encok)', 'HIN', 15000,100),
+('HIN011', 'Pembasuh Arum Dalu', 'HIN', 15000,100),
+('HIN012', 'PILIS Natural (Sehat Pasca Bersalin)', 'HIN', 15000,100),
+('HIN013', 'PROLEGA (Membantu Melonggarkan Pernapasan)', 'HIN', 50000,100),
+('HIN014', 'Sabun Wajah Herbal Olivea Gamat', 'HIN', 12500,100),
+('HIN015', 'Sabun Wajah Herbal Olivea Kulit Manggis', 'HIN', 12500,100),
+('HIN016', 'Sabun Wajah Herbal Olivea Propolis', 'HIN', 12500,100),
+('HIN017', 'Sabun Wajah Herbal Olivea Virgin Coconut Oil', 'HIN', 12500,100),
+('HIN018', 'Shampo Herbal Zaitun OLIVEA plus Aloe Vera', 'HIN', 25000,100),
+('HIN019', 'Shampo Herbal Zaitun OLIVEA plus Gamat', 'HIN', 25000,100),
+('HIN020', 'Shampo Herbal Zaitun OLIVEA plus Ginseng', 'HIN', 25000,100),
+('HIN021', 'Shampo Herbal Zaitun OLIVEA plus Pegagan', 'HIN', 25000,100),
+('HIN022', 'Teh Herbal Sarang Walet Plus Alang-Alang', 'HIN', 40000,100),
+('HIN023', 'Teh Herbal Sarang Walet Plus Beluntas', 'HIN', 40000,100),
+('HIN024', 'Teh Herbal Sarang Walet Plus Pegagan', 'HIN', 40000,100),
+('HIN025', 'Teh Herbal Sarang Walet Plus Sambung Nyawa', 'HIN', 40000,100),
+('HIN026', 'Teh Herbal Sarang Walet Plus Sirih Merah', 'HIN', 40000,100),
+('HIN027', 'Teh Herbal Sarang Walet Stamina Plus', 'HIN', 40000,100),
+('HIN028', 'Tensofit (Meringankan Tekanan Darah Tinggi)', 'HIN', 40000,100),
+('HIN029', 'WASANGIN (Meredakan Gejala Masuk Angin)', 'HIN', 35000,100),
+('HIN030', 'WAZERO (Meringankan Gejala Wasir)', 'HIN', 40000,100),
+('HIN096', 'Bedak Dingin Citra Herba Insani', 'HIN', 15000,100),
+('HIN097', 'Fitomaa (untuk Gangguan Lambung)', 'HIN', 40000,100),
+('HIN098', 'Gempur Batu (Meluruhkan Batu Oksalat di Ginjal)', 'HIN', 40000,100),
+('HIN099', 'GINOLA (Menjaga Kesehatan Ginjal)', 'HIN', 40000,100),
+
+('HIS528', 'Bee Pollen 75 Kapsul Herbal Inti Sehat', 'HIS', 35000,100),
+('HIS529', 'Cream Fathimah Plus', 'HIS', 30000,100),
+('HIS530', 'Diabetes Herbal Inti Sehat', 'HIS', 40000,100),
+('HIS531', 'Gemuk Sehat Herbal Inti Sehat', 'HIS', 40000,100),
+('HIS532', 'Herba Lelaki Herbal Inti Sehat', 'HIS', 40000,100),
+('HIS533', 'Herbal Kolesterol Herbal Inti Sehat', 'HIS', 40000,100),
+('HIS534', 'Herbal Stroke/Syaraf Herbal Inti Sehat', 'HIS', 50000,100),
+('HIS535', 'Hipertensi Herbal Inti Sehat', 'HIS', 40000,100),
+('HIS536', 'ISPA HIS', 'HIS', 40000,100),
+('HIS537', 'Kapsul Hernia Herbal Inti Sehat', 'HIS', 40000,100),
+('HIS538', 'Kapsul Ikan Kutuk ALBUMINO', 'HIS', 50000,100),
+('HIS539', 'Kapsul Kulit Manggis Herbal Inti Sehat', 'HIS', 35000,100),
+('HIS540', 'Kapsul Sarang Semut Herbal Inti Sehat', 'HIS', 50000,100),
+('HIS541', 'Kapsul Temulawak Herbal Inti Sehat', 'HIS', 35000,100),
+('HIS542', 'Keladi Tikus Super Herbal Inti Sehat', 'HIS', 50000,100),
+('HIS543', 'Madu Gurah Plus Menthol Alam', 'HIS', 45000,100),
+('HIS544', 'Neo Gamat', 'HIS', 50000,100),
+('HIS545', 'Neo Gamat Gold', 'HIS', 60000,100),
+('HIS546', 'Neo Spirulina Herbal Inti Sehat', 'HIS', 50000,100),
+('HIS547', 'Sehat Ginjal HIS', 'HIS', 40000,100),
+('HIS548', 'Sehat Jantung Herbal Inti Sehat', 'HIS', 40000,100),
+('HIS549', 'Sehat Mata HIS', 'HIS', 45000,100),
+('HIS550', 'V-Minim HIS', 'HIS', 40000,100),
+
+('HIU436', 'Androbiotik (Sambiloto Plus)', 'HIU', 40000,100),
+('HIU437', 'Bantu-Gin (Mencegah dan Mengatasi Gangguan Batu Gi', 'HIU', 40000,100),
+('HIU438', 'Cream Aliya Cantik Natural Anti Acne (Solusi Jeraw', 'HIU', 40000,100),
+('HIU439', 'Cream Aliya Cantik Natural Regenerating', 'HIU', 40000,100),
+('HIU440', 'Diacare (Mengobati Kencing Manis dan Mencegah Komp', 'HIU', 45000,100),
+('HIU441', 'FITOGURA (Meredakan Flu & Batuk)', 'HIU', 55000,100),
+('HIU442', 'Gastromaag', 'HIU', 40000,100),
+('HIU443', 'Gurah Flu & Batuk', 'HIU', 40000,100),
+('HIU444', 'Habbatussauda plus Mengkudu', 'HIU', 40000,100),
+('HIU445', 'Hemoroid', 'HIU', 45000,100),
+('HIU446', 'Herba Arum', 'HIU', 40000,100),
+('HIU447', 'Herba ASI (Herbal Indo Utama)', 'HIU', 40000,100),
+('HIU448', 'Herba BAB (Herbal Indo Utama)', 'HIU', 40000,100),
+('HIU449', 'Herba Cakar Ayam HIU', 'HIU', 40000,100),
+('HIU450', 'Herba Cardiocare', 'HIU', 45000,100),
+('HIU451', 'Herba Daun Dewa Herbal Indo Utama', 'HIU', 45000,100),
+('HIU452', 'Herba TDR (Insomnia) HIU', 'HIU', 45000,100),
+('HIU453', 'Herba Tonsil (Mencegah dan Mengobati Radang Amande', 'HIU', 40000,100),
+('HIU454', 'Herba Typhusa (Mencegah dan Mengobati Penyakit Typ', 'HIU', 40000,100),
+('HIU455', 'HERSAGI (Herbal Sakit Gigi)', 'HIU', 30000,100),
+('HIU456', 'HERSARI (Herbal Sariawan)', 'HIU', 25000,100),
+('HIU457', 'Hipotensi Herbal Indo Utama', 'HIU', 45000,100),
+('HIU458', 'Histaminic', 'HIU', 45000,100),
+('HIU459', 'HIU HEPAFIT (Hepatitis)', 'HIU', 50000,100),
+('HIU460', 'HIU Silangsing\n\n\nSiLangsing (Herbal Pelangsing)', 'HIU', 50000,100),
+('HIU461', 'Joss - X (Menambah Stamina dan Keperkasaan Pria)', 'HIU', 40000,100),
+('HIU462', 'Joss-V (Solusi Problema Kewanitaan)', 'HIU', 40000,100),
+('HIU463', 'Kapsul Cabe Jawa HIU', 'HIU', 45000,100),
+('HIU464', 'Kapsul Daun Salam HIU', 'HIU', 40000,100),
+('HIU465', 'Kapsul Daun Sirsak Herbal Indo Utama', 'HIU', 45000,100),
+('HIU466', 'Kapsul Gamat (Gamat Emas) Herbal Indo Utama', 'HIU', 75000,100),
+('HIU467', 'Kapsul Habbatussauda Oil Thibbuna isi 100 Kapsul', 'HIU', 39000,100),
+('HIU468', 'Kapsul Habbatussauda Oil Thibbuna isi 210 Kapsul', 'HIU', 72000,100),
+('HIU469', 'Kapsul Habbatussauda Thibbuna isi 100 Kapsul', 'HIU', 17000,100),
+('HIU470', 'Kapsul Habbatussauda Thibbuna isi 20 Kapsul', 'HIU', 6000,100),
+('HIU471', 'Kapsul Habbatussauda Thibbuna isi 210 Kapsul', 'HIU', 33000,100),
+('HIU472', 'Kapsul Habbatussauda Thibbuna isi 500 Kapsul', 'HIU', 72000,100),
+('HIU473', 'Kapsul Herbislim Herbal Indo Utama', 'HIU', 50000,100),
+('HIU474', 'Kapsul Keladi Tikus Plus Herbal Indo Utama', 'HIU', 45000,100),
+('HIU475', 'Kapsul Kulit Manggis HIU', 'HIU', 45000,100),
+('HIU476', 'Kapsul Kumis Kucing Herbal Indo Utama', 'HIU', 40000,100),
+('HIU477', 'Kapsul Mengkudu HIU', 'HIU', 40000,100),
+('HIU478', 'Kapsul Pasak Bumi HIU', 'HIU', 40000,100),
+('HIU479', 'Kapsul Rumput Mutiara HIU', 'HIU', 40000,100),
+('HIU480', 'Kapsul Sambung Nyowo Herbal Indo Utama', 'HIU', 45000,100),
+('HIU481', 'Madu Kelengkeng 300 gr Honeymart', 'HIU', 50000,100),
+('HIU482', 'Madu Kelengkeng 450 gr + 100gr  Honeymart', 'HIU', 75000,100),
+('HIU483', 'Madu Kelengkeng 900 gr + 200 gr  Honeymart', 'HIU', 140000,100),
+('HIU484', 'Madu Kopi 300 gr Honeymart', 'HIU', 35000,100),
+('HIU485', 'Madu Kopi 450 gr + 100gr  Honeymart', 'HIU', 55000,100),
+('HIU486', 'Madu Kopi 900 gr + 200 gr  Honeymart', 'HIU', 105000,100),
+('HIU487', 'Madu Mangga 300 gr Honeymart', 'HIU', 40000,100),
+('HIU488', 'Madu Mangga 450 gr + 100 gr Honeymart', 'HIU', 60000,100),
+('HIU489', 'Madu Mangga 900 gr + 200 gr  Honeymart', 'HIU', 118000,100),
+('HIU490', 'Madu Multiflora 450 gr + 100gr  Honeymart', 'HIU', 55000,100),
+('HIU491', 'Madu Multiflora 900 gr + 200 gr  Honeymart', 'HIU', 105000,100),
+('HIU492', 'Madu Rambutan 300 gr Honeymart', 'HIU', 35000,100),
+('HIU493', 'Madu Rambutan 450 gr + 100 gr Honeymart', 'HIU', 55000,100),
+('HIU494', 'Madu Rambutan 900 gr + 200 gr  Honeymart', 'HIU', 105000,100),
+('HIU495', 'Madu Randu 300 gr Honeymart', 'HIU', 40000,100),
+('HIU496', 'Madu Randu 450 gr + 100 gr Honeymart', 'HIU', 60000,100),
+('HIU497', 'Madu Randu 900 gr + 200 gr  Honeymart', 'HIU', 110000,100),
+('HIU498', 'Madu Syifa Kids Alergi dan Gatal', 'HIU', 40000,100),
+('HIU499', 'Madu Syifa Kids Cerdas dan Cendekia', 'HIU', 40000,100),
+('HIU500', 'Madu Syifa Kids Diare', 'HIU', 40000,100),
+('HIU501', 'Madu Syifa Kids Fluba', 'HIU', 40000,100),
+('HIU502', 'Madu Syifa Kids ISPA dan Flek Paru', 'HIU', 40000,100),
+('HIU503', 'Madu Syifa Kids Mata Sehat', 'HIU', 40000,100),
+('HIU504', 'Madu Syifa Kids Nafsu Makan dan Cacingan', 'HIU', 40000,100),
+('HIU505', 'Madu Syifa Kids Penawar Angin', 'HIU', 40000,100),
+('HIU506', 'Madu Syifa Kids Promandel', 'HIU', 40000,100),
+('HIU507', 'Madu Syifa Kids Propolis', 'HIU', 50000,100),
+('HIU508', 'Madu Syifa Kids Sembelit', 'HIU', 40000,100),
+('HIU509', 'Madu Syifa Kids Turun Panas', 'HIU', 40000,100),
+('HIU510', 'Minyak Habbatussauda Thibbuna 100 ml', 'HIU', 44000,100),
+('HIU511', 'Minyak Habbatussauda Thibbuna 30 ml', 'HIU', 17000,100),
+('HIU512', 'Minyak Habbatussauda Thibbuna 60 ml', 'HIU', 33000,100),
+('HIU513', 'Minyak Zaitun Extra Virgin Thibbuna 100 ml', 'HIU', 20000,100),
+('HIU514', 'Minyak Zaitun Extra Virgin Thibbuna 30 ml', 'HIU', 8000,100),
+('HIU515', 'Minyak Zaitun Extra Virgin Thibbuna 60 ml', 'HIU', 14000,100),
+('HIU516', 'Nafsu Makan Herbal Indo Utama', 'HIU', 40000,100),
+('HIU517', 'Neo_Tensi (Mencegah dan Mengobati Darah Tinggi)', 'HIU', 45000,100),
+('HIU518', 'Neuro Herba (Stroke)', 'HIU', 55000,100),
+('HIU519', 'Papua Sarang Semut Herbal Indo Utama', 'HIU', 75000,100),
+('HIU520', 'Pro Koles (Menurunkan Kolesterol Tinggi dan Menceg', 'HIU', 45000,100),
+('HIU521', 'PROSAMURA', 'HIU', 45000,100),
+('HIU522', 'Prostat Herbal Indo Utama', 'HIU', 45000,100),
+('HIU523', 'SAMURATIK', 'HIU', 55000,100),
+('HIU524', 'Sari Kurma Gold Thibbuna', 'HIU', 30000,100),
+('HIU525', 'Superfood Spirulins', 'HIU', 60000,100),
+('HIU526', 'Zaitun Oil Thibbuna isi 100 Kapsul', 'HIU', 25000,100),
+('HIU527', 'Zaitun Oil Thibbuna isi 210 Kapsul', 'HIU', 44000,100),
+
+('HPN137', 'Air Hajar Sa''adah 3 ml El Hanif', 'HPN', 65000,100),
+('HPN138', 'Minyak Alami Tongkat Satria (Untuk Suami)', 'HPN', 80000,100),
+('HPN139', 'Minyak Bulus El-Hanif', 'HPN', 25000,100),
+('HPN140', 'Obat Luka Jempolan (Obat Luka Diabetes)', 'HPN', 35000,100),
+('HPN141', 'Tongkat Gurah ''V'' El-Hanif', 'HPN', 75000,100),
+
+('IMA142', 'Coffe Habasy Ginseng ( 18 in 1)', 'IMA', 25000,100),
+('IMA143', 'Kopi Plus Lingzhi (Rendah Kafein, Atasi Kanker)', 'IMA', 50000,100),
+('IMA144', 'Madu Batuk El Iman 175 gram', 'IMA', 30000,100),
+('IMA145', 'Madu Thypus El Iman', 'IMA', 55000,100),
+
+('KHO042', 'Madu Hitam Sumbawa Al Khodry', 'KHO', 75000,100),
+('KHO043', 'Minyak Kemiri Premium Al Khodry', 'KHO', 25000,100),
+
+('KIA025', 'Air Hajar Sa''adah/Jahannam Mesir 3 ml Al Kautsar', 'KIA', 65000,100),
+('KIA026', 'BILQIS CREAM (Pemutih Ketiak dan Selangkangan)', 'KIA', 55000,100),
+('KIA027', 'Breast Up Cream (Pengencang Payudara)', 'KIA', 85000,100),
+('KIA028', 'Ekstrak Tribulus Gold Terrestris', 'KIA', 50000,100),
+('KIA029', 'Hajar Sa''adah Black Stone With Aroma Teraphy', 'KIA', 90000,100),
+('KIA030', 'Herbal Axilla (Penghilang Bau Badan)', 'KIA', 35000,100),
+('KIA031', 'Humairo Cream Nature', 'KIA', 35000,100),
+('KIA032', 'Kopi Sulthon 7 in 1 (Kopinya Keluarga Harmonis)', 'KIA', 100000,100),
+('KIA033', 'Ladies Whitening Cream (Pemutih Wajah dan Leher)', 'KIA', 45000,100),
+('KIA034', 'Long Big Enlargement X Nature Oil 6 ml', 'KIA', 200000,100),
+('KIA035', 'Minyak Bulus Al Kautsar', 'KIA', 25000,100),
+('KIA036', 'Minyak Bulus Plus Al Kautsar', 'KIA', 30000,100),
+('KIA037', 'Minyak Gosok Sumbawa Asli', 'KIA', 50000,100),
+('KIA038', 'Permanent Penis Enlargement (Natural Oil)', 'KIA', 120000,100),
+('KIA039', 'Pil Manjakani (Female Solution)', 'KIA', 95000,100),
+('KIA040', 'Squalene Cream (Cerahkan Kulit Wajah)', 'KIA', 35000,100),
+('KIA041', 'Tongkat Gurah Vagina Super (TGV Super)', 'KIA', 75000,100),
+
+('MAB064', 'OSaGi (Obat Sakit Gigi)', 'MAB', 35000,100),
+('MAB065', 'OSARI (Obat Sariawan dan Panas Dalam)', 'MAB', 35000,100),
+
+('MEN592', 'Madu Propolis Sapu Jagad Plus Royal Jelly & Habbat', 'MEN', 40000,100),
+('MEN593', 'Mama Honey Bumil', 'MEN', 25000,100),
+('MEN594', 'Mama Honey Busui', 'MEN', 25000,100),
+('MEN595', 'Mama Honey Subur', 'MEN', 25000,100),
+('MEN596', 'Manja Honey', 'MEN', 30000,100),
+('MEN597', 'Mumtaz Kids Honey', 'MEN', 25000,100),
+('MEN598', 'Ramuan Madu Pedang Arab (Khusus Pria)', 'MEN', 70000,100),
+('MEN599', 'Soyamil (Susu Herbal Ibu Hamil)', 'MEN', 28000,100),
+
+('MHE044', 'Afiafit', 'MHE', 60000,100),
+('MHE045', 'Madu Randu 0.5kg Al-Manar', 'MHE', 40000,100),
+
+
+('MUS046', 'Siwak Basah Import Al-Muslim', 'MUS', 12000,100),
+
+('NAH071', 'Kid''s Honey Complete Protect', 'NAH', 50000,100),
+('NAH072', 'Madu Hutan plus Spirulina', 'NAH', 40000,100),
+('NAH073', 'Madu Omega 3', 'NAH', 50000,100),
+('NAH074', 'Madu Xtamina Radix plus Ginseng Korea dan Tongkat ', 'NAH', 55000,100),
+('NAH075', 'Nigella Propolis 100 Kapsul', 'NAH', 80000,100),
+('NAH076', 'Spirulina Kid''s Honey Plus Gamat dan Klorofil', 'NAH', 25000,100),
+('NAH077', 'Spirulina kid''s Honey plus Propolis', 'NAH', 25000,100),
+('NAH078', 'Spirulina Madu Stamina (+ Pegagan + Meniran + Pasa', 'NAH', 45000,100),
+('NAH079', 'Walad Honey (+ Kurma + Pegagan + Temulawak dll)', 'NAH', 22000,100),
+('NAH080', 'Walad Honey GOLD', 'NAH', 25000,100),
+('NAH081', 'Walad Honey Premium', 'NAH', 25000,100),
+
+('OIF066', 'Madu Hutan Multiflora 0,5 kg Ath Thoifah', 'OIF', 45000,100),
+('OIF067', 'Madu Hutan Multiflora 1 kg Ath Thoifah', 'OIF', 82000,100),
+('OIF068', 'Madu Hutan Platinum 0,5 kg Ath Thoifah', 'OIF', 49000,100),
+('OIF069', 'Madu Hutan Platinum 1 kg Ath Thoifah', 'OIF', 88000,100),
+
+('QUB001', 'Madu Pollen 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB002', 'Madu Putih 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB003', 'Madu Putih 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB004', 'Madu Rambutan 0,5 kg l Qubro', 'QUB', 45000,100),
+('QUB005', 'Madu Rambutan 1 kg Al Qubro', 'QUB', 65000,100),
+('QUB006', 'Madu Rami 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB007', 'Madu Rami 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB008', 'Madu Randu 0.5 kg Al-Qubro', 'QUB', 45000,100),
+('QUB009', 'Madu Randu 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB010', 'Madu Rosella 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB011', 'Madu Rosella 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB012', 'Madu Royal Honey 350 gram Al-Qubro', 'QUB', 60000,100),
+('QUB013', 'Madu Sarang 0,5 kg Al-Qubro', 'QUB', 85000,100),
+('QUB014', 'Madu Sarang 1 kg Al-Qubro', 'QUB', 120000,100),
+('QUB015', 'Madu Sengon 0,5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB016', 'Madu Sengon 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB017', 'Madu Songkeling 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB018', 'Madu Songkeling 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB019', 'Madu Stroberi 0.5 kg Al-Qubro', 'QUB', 45000,100),
+('QUB020', 'Madu Stroberi 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB021', 'Madu Sumbawa 0,5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB022', 'Madu Sumbawa 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB023', 'Madu Tawon Gong 0,5 kg Al Qubro', 'QUB', 45000,100),
+('QUB024', 'Madu Tawon Gong 1 kg al qubro', 'QUB', 65000,100),
+('QUB038', 'Brazil Honey 500 gr Al-Qubro', 'QUB', 150000,100),
+('QUB039', 'Madu Akasia 0.5 Kg A-Qubro', 'QUB', 45000,100),
+('QUB040', 'Madu Akasia 1 Kg A-Qubro', 'QUB', 65000,100),
+('QUB041', 'Madu Ambon 0,5 kg Al Qubro', 'QUB', 45000,100),
+('QUB042', 'Madu Ambon 1 kg Al Qubro', 'QUB', 65000,100),
+('QUB043', 'Madu Apel 0,5 kg Al Qubro', 'QUB', 45000,100),
+('QUB044', 'Madu Apel 1 kg Al Qubro', 'QUB', 65000,100),
+('QUB045', 'Madu Badui 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB046', 'Madu Badui 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB047', 'Madu Belimbing 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB048', 'Madu Belimbing 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB049', 'Madu Durian 0,5 kg al qubro', 'QUB', 45000,100),
+('QUB050', 'Madu Durian 1 kg Al Qubro', 'QUB', 65000,100),
+('QUB051', 'Madu Flores 0,5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB052', 'Madu Flores 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB053', 'Madu Gunung Mutis 0,5 kg Al Qubro', 'QUB', 45000,100),
+('QUB054', 'Madu Gunung Mutis 1 kg Al qubro', 'QUB', 65000,100),
+('QUB055', 'Madu Gurah Anak (MGA) Al-Qubro', 'QUB', 35000,100),
+('QUB056', 'Madu Gurah Dewasa Al-Qubro', 'QUB', 45000,100),
+('QUB057', 'Madu Hitam 0.5 kg Al-Qubro', 'QUB', 45000,100),
+('QUB058', 'Madu Hitam 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB059', 'Madu Hutan Riau 0.5 kg Al-Qubro', 'QUB', 45000,100),
+('QUB060', 'Madu Hutan Riau 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB061', 'Madu Jambi 0.5 kg Al-Qubro', 'QUB', 45000,100),
+('QUB062', 'Madu Jambi 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB063', 'Madu Jeruk 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB064', 'Madu Jeruk 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB065', 'Madu Kaliandra 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB066', 'Madu Kaliandra Al-Qubro 1kg', 'QUB', 65000,100); ]
+
+]
+[ TIME: Wed Jan 07 22:42:41 ICT 2015 ]
+% com.mckoi.database.StatementException: Can't find column: id_Product
+	at com.mckoi.database.interpret.Statement.resolveColumn(Statement.java:226)
+	at com.mckoi.database.interpret.Insert.prepare(Insert.java:153)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO product (id_Product, nama_product, idSupp, harga, stok) VALUES
+
+('ABE007', 'Albibet Al Biruni (Diabetes/Kencing Manis)', 'ABE', 59000,100),
+('ABE008', 'AlbiKoles Al Biruni (Kolesterol)', 'ABE', 59000,100),
+('ABE009', 'Albimor Al Biruni (Membunuh Kanker dan Tumor)', 'ABE', 73000,100),
+('ABE010', 'Albirmaag/Herba Maag 50K Al Biruni', 'ABE', 59000,100),
+('ABE011', 'Albistrok (Membantu Memulihkan Stroke)', 'ABE', 73000,100),
+('ABE012', 'Bloody Cleanser Al Biruni (Detoksifikasi Racun Tub', 'ABE', 80000,100),
+('ABE013', 'Cing Cing Al Biruni (thypus, demam tinggi, stroke,', 'ABE', 80000,100),
+('ABE014', 'Herba Gurah Jumbo Al Biruni / Albiguraa Jumbo', 'ABE', 59000,100),
+('ABE015', 'Herba Gurah Pot Al Biruni (Albiguraa 18 Kapsul)', 'ABE', 31000,100),
+('ABE016', 'Herba Gurah Reguler Al Biruni (Albiguraa 25 kapsul', 'ABE', 36000,100),
+('ABE017', 'Herba Gurah Yunior Al Biruni (Albirugaa Untuk Anak', 'ABE', 36000,100),
+('ABE018', 'Herba Maag / AlbirMag Al Biruni', 'ABE', 36000,100),
+('ABE019', 'HerbaSam 50K Al Biruni', 'ABE', 59000,100),
+('ABE020', 'HerbaSlim Al Biruni', 'ABE', 59000,100),
+('ABE021', 'HerbaTensi Al Biruni (Hipertensi/Darah Tinggi)', 'ABE', 59000,100),
+
+('ABH004', 'SuburKand 1', 'ABH', 59000,100),
+('ABH005', 'SuburKand 2', 'ABH', 59000,100),
+
+('ABK006', 'Jamu Madu Habbatussauda Al-Barokah (Quality has a ', 'ABK', 100000,100),
+
+('ADP001', 'Kapsul Minyak Ikan Salmon isi 50 Softgel', 'ADP', 40000,100),
+('ADP002', 'Kapsul Serbuk Ashitaba Herbal (Seledri Jepang)', 'ADP', 40000,100),
+
+('ADR001', 'Madu Kaliandra 300 ml Addawa', 'ADR', 43000,100),
+('ADR002', 'Madu Kaliandra 700 ml Addawa', 'ADR', 77000,100),
+('ADR003', 'Madu Randu 1 Kg Addawa', 'ADR', 100000,100),
+
+('AFH004', 'Bedak Dingin Sari Bengkoang', 'AFH', 12000,100),
+('AFH005', 'Minyak Bulus Asli Kalimantan Kemasan Roll On', 'AFH', 15000,100),
+
+('AHZ022', 'Kapsul Minyak Habbatussauda'' Al Hijaz Isi 100', 'AHZ', 60000,100),
+('AHZ023', 'Kapsul Minyak Habbatussauda'' Al Hijaz Isi 200', 'AHZ', 110000,100),
+('AHZ024', 'Kapsul Minyak Habbatussauda'' Al Hijaz Isi 60', 'AHZ', 40000,100),
+
+('AID624', 'Madu Muwallad 175 gram', 'AID', 35000,100),
+('AID625', 'Madu Muwallad 375 gram', 'AID', 65000,100),
+('AID626', 'MiGa Zaitun Plus', 'AID', 22500,100),
+('AID627', 'Minyak Sawaan', 'AID', 20000,100),
+('AID628', 'Obat Tetes THM (Telinga Hidung Mata)', 'AID', 15000,100),
+('AID629', 'OTEM (Obat Tetes Mata)', 'AID', 25000,100),
+('AID630', 'PiCi (Power Cleanser) 50 Kapsul', 'AID', 35000,100),
+('AID631', 'PiCi (Power Cleanser) 75 Kapsul', 'AID', 70000,100),
+('AID632', 'Tabkir Naturaid (Khusus Wanita)', 'AID', 23000,100),
+('AID633', 'Zait Sauda''', 'AID', 20000,100),
+('AID634', 'Zulu Madu (Masker, Lulur dan Pasta Gigi)', 'AID', 25000,100),
+('AID635', 'Zulu Natural (Bedak, Masker dan Lulur)', 'AID', 25000,100),
+
+('AIN001', 'KAMIL 3 in 1 (Habbatussauda, Zaitun, Propolis) 70 ', 'AIN', 50000,100),
+('AIN002', 'kamil 3 in 1 isi 200 kapsul', 'AIN', 95000,100),
+('AIN003', 'Kapsul Minyak Habbatussauda'' Kamil isi 70', 'AIN', 45000,100),
+('AIN004', 'Kapsul Minyak Ikan KAMIL (Fish Oil + Omega 3)', 'AIN', 90000,100),
+('AIN005', 'Kapsul Minyak Zaitun KAMIL isi 70', 'AIN', 40000,100),
+('AIN006', 'Kapsul Serbuk Kamil Habbatussauda 70 Kapsul', 'AIN', 25000,100),
+('AIN007', 'Minyak Zaitun KAMIL 100 ml', 'AIN', 25000,100),
+
+('ALA002', 'Minyak Zaitun Al Amir 175 ml (Import)', 'ALA', 40000,100),
+('ALA003', 'Minyak Zaitun Extra Virgin Al Amir 250 ml', 'ALA', 60000,100),
+
+('ALW001', 'STOP Ngompol For Kids Al - Waliy', 'ALW', 25000,100),
+('ALW007', 'Madu Amandel For Kids Al - Waliy', 'ALW', 30000,100),
+('ALW008', 'Madu Batuk Dewasa Al - Waliy', 'ALW', 25000,100),
+('ALW009', 'Madu Batuk For Kids Al - Waliy', 'ALW', 25000,100),
+
+('ASM006', 'Agadro NODIBET', 'ASM', 120000,100),
+
+('ASS062', 'Talbinah 200 gram Aminfood', 'ASS', 20000,100),
+('ASS063', 'Talbinah 400 gram Aminfood', 'ASS', 40000,100),
+
+('DOK676', 'Habbatuna (Minyak Habatussauda + Zaitun Tursina)', 'DOK', 35000,100),
+('DOK677', 'Habbatussauda'' Nigela Sativa Super 100 Kapsul', 'DOK', 20000,100),
+('DOK678', 'Habbatussauda'' Nigela Sativa Super 200 Kapsul', 'DOK', 40000,100),
+('DOK679', 'Habbatussauda'' Nigela Sativa Super 50 Kapsul', 'DOK', 13000,100),
+('DOK680', 'Kapsul Minyak Habbatussauda'' Habasy Isi 100 (Pondo', 'DOK', 55000,100),
+('DOK681', 'Kapsul Minyak Habbatussauda'' Habasy Isi 200 (Pondo', 'DOK', 105000,100),
+('DOK682', 'Kapsul Minyak Habbatussauda'' Habasy Isi 50  (Pondo', 'DOK', 35000,100),
+('DOK683', 'Kapsul Minyak Zaitun Tursina Isi 50', 'DOK', 25000,100),
+('DOK684', 'Madu Anak Cerdas (Madu + Zaitun + Habbatussauda'' +', 'DOK', 20000,100),
+('DOK685', 'Madu Anak Cerdas Plus Propolis Ajaban', 'DOK', 22000,100),
+('DOK686', 'Madu Hutan Super An Nahl (+ Bee Pollen dan Royal J', 'DOK', 40000,100),
+('DOK687', 'Madu Hutan Super An Nahl (+ Bee Pollen dan Royal J', 'DOK', 75000,100),
+('DOK688', 'Mazidun 6 in 1 (Madu + Zaitun + Habbatussauda'' + J', 'DOK', 45000,100),
+('DOK689', 'Obat Herbal Purwoceng 100%', 'DOK', 25000,100),
+('DOK690', 'Rosella Mesir 100 gram', 'DOK', 28000,100),
+('DOK691', 'Sari Kurma Madinah 350 gram', 'DOK', 45000,100),
+('DOK692', 'Terapi Herba Susut Alami', 'DOK', 40000,100),
+
+('DRA088', 'Sabun Mandi Padat Antiseptik POMPIA Olive Oil', 'DRA', 7500,100),
+('DRA089', 'Sabun Mandi SERE POMPIA Aroma Melon', 'DRA', 7500,100),
+('DRA090', 'Sabun Mandi SERE POMPIA Aroma Strawberry', 'DRA', 7500,100),
+('DRA091', 'Sabun Olive Oil POMPIA Aroma Chocolate', 'DRA', 8000,100),
+('DRA092', 'Sabun Wangi Sereh SANDO', 'DRA', 6000,100),
+
+('EOH636', 'BEAUTY-UP (Pueraria Mirifica Extract) Pembesar Pay', 'EOH', 125000,100),
+('EOH637', 'Bee Propolis 25 Tablet @ 250 mg', 'EOH', 35000,100),
+('EOH638', 'Bee Propolis 50 Tablet @ 250 mg', 'EOH', 65000,100),
+('EOH639', 'Blackseed Soya (Instan Kedelai Bubuk plus Habbatus', 'EOH', 27500,100),
+('EOH640', 'Kid''s Soya (Sari Kedelai Instan untuk Anak)', 'EOH', 27000,100),
+('EOH641', 'LaxiFit (Gurah Perut Neocleanser Baru)', 'EOH', 35000,100),
+('EOH642', 'MAMA SOYA (Bubuk instant kedelai plus daun katuk,d', 'EOH', 28000,100),
+('EOH643', 'Minyak Zaitun Extra Virgin Palestine 100 ml', 'EOH', 28000,100),
+('EOH644', 'Minyak Zaitun Extra Virgin Palestine 30 ml', 'EOH', 11000,100),
+('EOH645', 'Minyak Zaitun Extra Virgin Palestine 60 ml', 'EOH', 19000,100),
+('EOH646', 'Neo Propolis 50 Kapsul', 'EOH', 80000,100),
+('EOH647', 'Shampo Zaitun NeoHerba', 'EOH', 22000,100),
+('EOH648', 'Zeston (khusus pria dewasa sudah beristri)', 'EOH', 45000,100),
+
+('ETA146', 'Daun Jati Belanda Kering 100 gram', 'ETA', 12000,100),
+('ETA147', 'Daun Jati Cina Curah 90 gram', 'ETA', 15000,100),
+('ETA148', 'Sarang Semut Papua Curah 100 Gram', 'ETA', 35000,100),
+('ETA149', 'Serbuk Daun Bidara 250 gram (curah)', 'ETA', 80000,100),
+('ETA150', 'Teh Rosella 100 gram (Kuntum Bunga Rosella Kering)', 'ETA', 27000,100),
+
+('FIH151', 'Cream Fyra Gamat plus Royal Jelly', 'FIH', 30000,100),
+('FIH152', 'Cream Fyra Zaitun plus Royal Jelly', 'FIH', 30000,100),
+('FIH153', 'Fyra Cream Propolis dan Royal Jelly', 'FIH', 30000,100),
+('FIH154', 'Fyra Sabun Wajah Aloevera', 'FIH', 8000,100),
+('FIH155', 'Fyra Sabun Wajah Alpukat', 'FIH', 8000,100),
+('FIH156', 'Fyra Sabun Wajah Blackseed', 'FIH', 8000,100),
+('FIH157', 'Fyra Sabun Wajah Gamat', 'FIH', 8000,100),
+('FIH158', 'Fyra Sabun Wajah Goat Milk', 'FIH', 8000,100),
+('FIH159', 'Fyra Sabun Wajah Kopi', 'FIH', 8000,100),
+('FIH160', 'Fyra Sabun Wajah Mentimun', 'FIH', 8000,100),
+('FIH161', 'Fyra Sabun Wajah Pepaya', 'FIH', 8000,100),
+('FIH162', 'Fyra Sabun Wajah Propolis', 'FIH', 8000,100),
+('FIH163', 'Fyra Sabun Wajah Zaitun', 'FIH', 8000,100),
+('FIH164', 'Sabun Mandi Therapy Soap Daun Bidara Extra Habbatu', 'FIH', 6000,100),
+('FIH165', 'Sabun Mandi Therapy Soap Sedap Wangi', 'FIH', 6000,100),
+
+('FSA081', 'Madu Bugar Kunyit Asam Al-Afiat', 'FSA', 30000,100),
+('FSA082', 'Madu Bugar Rosella Manggis Al-Afiat', 'FSA', 40000,100),
+('FSA083', 'Sirup Gurah Anak dan Dewasa Rasa MINT 75 ml', 'FSA', 30000,100),
+('FSA084', 'Sirup Gurah untuk Anak dan Dewasa 125 ml', 'FSA', 50000,100),
+('FSA085', 'Sirup Gurah untuk Anak dan Dewasa 75 ml', 'FSA', 30000,100),
+('FSA086', 'Sirup Gurah Untuk Anak dan Dewasa Rasa MINT 125 ml', 'FSA', 50000,100),
+
+('GHE166', 'Madu Alang-alang (Anti Hepatitic)', 'GHE', 45000,100),
+('GHE167', 'Madu Anti Asam Urat', 'GHE', 45000,100),
+('GHE168', 'Madu Anti Diare', 'GHE', 45000,100),
+('GHE169', 'Madu Anti Hamil (Spesial Kontrasepsi Pria)', 'GHE', 45000,100),
+('GHE170', 'Madu Anti Nyeri Otot', 'GHE', 45000,100),
+('GHE171', 'Madu Anti Wasir', 'GHE', 45000,100),
+('GHE172', 'Madu Asma & Sinusitis', 'GHE', 45000,100),
+('GHE173', 'Madu Cinta Ghaza Herbal', 'GHE', 45000,100),
+('GHE174', 'Madu Daun Sirsak', 'GHE', 45000,100),
+('GHE175', 'Madu Fantastic Four (4 in 1)', 'GHE', 45000,100),
+('GHE176', 'Madu Gadung Cina Anti Rematik', 'GHE', 45000,100),
+('GHE177', 'Madu Hamil dan Menyusui Ghaza Herbal', 'GHE', 45000,100),
+('GHE178', 'Madu Jelly Gamat Gold Ghaza Herbal', 'GHE', 45000,100),
+('GHE179', 'Madu Keji Beling (Peluruh Batu Ginjal)', 'GHE', 45000,100),
+('GHE180', 'Madu Keladi Tikus Ghaza Herbal', 'GHE', 45000,100),
+('GHE181', 'Madu Malam Jumat', 'GHE', 45000,100),
+('GHE182', 'Madu Pasca Bersalin', 'GHE', 45000,100),
+('GHE183', 'Madu Penghilang Bau Badan', 'GHE', 45000,100),
+('GHE184', 'Madu Penghilang Nyeri Haid', 'GHE', 45000,100),
+('GHE185', 'Madu Penurun Demam', 'GHE', 45000,100),
+('GHE186', 'Madu Penyubur Kandungan Ghaza Herbal', 'GHE', 45000,100),
+('GHE187', 'Madu Prostat', 'GHE', 45000,100),
+('GHE188', 'Madu Rapet Wangi', 'GHE', 45000,100),
+('GHE189', 'Madu Rumput Mutiara (Anti Jerawat)', 'GHE', 45000,100),
+('GHE190', 'Madu Sarang Semut Ghaza Herbal', 'GHE', 45000,100),
+('GHE191', 'Madu Seledri (Anti Hipertensi)', 'GHE', 45000,100),
+('GHE192', 'Madu Special Batuk dan Sariawan', 'GHE', 45000,100),
+('GHE193', 'Madu Special Cacingan dan Nafsu Makan', 'GHE', 45000,100),
+('GHE194', 'Madu Spirulina Ghaza Herbal', 'GHE', 45000,100),
+('GHE195', 'Madu Tapak Liman (Anti Radang)', 'GHE', 45000,100),
+('GHE196', 'Minyak Habbatussauda'' 100 ml Ghaza Herbal', 'GHE', 60000,100),
+('GHE197', 'Minyak Habbatussauda'' 30 ml Ghaza Herbal', 'GHE', 25000,100),
+('GHE198', 'Minyak Zaitun Extra Virgin 100 Kapsul Ghaza Herbal', 'GHE', 35000,100),
+('GHE199', 'Minyak Zaitun Extra Virgin 200 Kapsul Ghaza Herbal', 'GHE', 65000,100),
+('GHE200', 'Minyak Zaitun Extra Virgin Ghaza Herbal 140 ml', 'GHE', 30000,100),
+('GHE201', 'Minyak Zaitun Extra Virgin Ghaza Herbal 60 ml', 'GHE', 15000,100),
+
+('GHU001', 'Madu Hutan Belantara Riau Al-Ghuroba'' 1 kg', 'GHU', 78000,100),
+('GHU002', 'Madu Hutan Kalimantan al-Ghuroba'' 0,5 kg', 'GHU', 43000,100),
+('GHU003', 'Madu Hutan Kalimantan Al-Ghuroba'' 1 kg', 'GHU', 63000,100),
+('GHU004', 'Minyak Angin 25 ml', 'GHU', 10000,100),
+('GHU005', 'Minyak Cengkih 25 ml', 'GHU', 20000,100),
+('GHU006', 'Minyak Gondopuro 25 ml', 'GHU', 12000,100),
+('GHU007', 'Minyak Habbatusauda'' 30 ml (Black Seed Oil)', 'GHU', 25000,100),
+('GHU008', 'Minyak Habbatussauda'' 60 ml (Black Seed Oil)', 'GHU', 40000,100),
+('GHU009', 'Minyak Kayu Putih Al Ghuroba'' 150 ml', 'GHU', 50000,100),
+('GHU010', 'Minyak Sereh 25 ml', 'GHU', 20000,100),
+('GHU011', 'Minyak Zaitun Extra Virgin al-Ghuroba'' 60 ml', 'GHU', 20000,100),
+('GHU012', 'Sabun Herbal Bunga Melati Al Ghuroba''', 'GHU', 7500,100),
+('GHU013', 'Sabun Herbal Sirih Al Ghuroba''', 'GHU', 7500,100),
+('GHU014', 'Sari Kurma Mumtaz', 'GHU', 35000,100),
+('GHU015', 'Syifa'' Fit 250 gr (Madu + Zaitun + Habbatussauda +', 'GHU', 42000,100),
+('GHU016', 'Syifa'' Fit Kapsul Al-Ghuroba'' (Madu + Habbatussuda', 'GHU', 40000,100),
+('GHU087', 'Al Mu''arris 250 gr (Madu+Zaitun+Habbatussauda+Herb', 'GHU', 45000,100),
+('GHU088', 'Cream Zaitun Al-Ghuroba''', 'GHU', 16000,100),
+('GHU089', 'Kapsul Bee Pollen Al Ghuroba', 'GHU', 35000,100),
+('GHU090', 'Madu Alami Ad_Dawa'' Bunga Kelengkeng 0.5 kg Al Ghu', 'GHU', 48000,100),
+('GHU091', 'Madu Alami Ad-Dawa'' Bunga Kelengkeng 1 kg Al Ghuro', 'GHU', 80000,100),
+('GHU092', 'Madu Alami Ad-Dawa'' Bunga Mangga 0,5 kg Al Ghuroba', 'GHU', 45000,100),
+('GHU093', 'Madu Alami Ad-Dawa'' Bunga Mangga 1 kg Al Ghuroba', 'GHU', 75000,100),
+('GHU094', 'Madu Alami Al-Lu''Lu'' Bunga Kopi 0,5 kg Al Ghuroba', 'GHU', 48000,100),
+('GHU095', 'Madu Alami Al-Lu''Lu'' Bunga Kopi 1 kg Al Ghuroba', 'GHU', 80000,100),
+('GHU096', 'Madu Alami Salsabila Bunga Randu 0,5 kg Al Ghuroba', 'GHU', 45000,100),
+('GHU097', 'Madu Alami Salsabila Bunga Randu 1 kg Al Ghuroba', 'GHU', 75000,100),
+('GHU098', 'Madu Clever Child', 'GHU', 32000,100),
+('GHU099', 'Madu Hutan Belantara Riau al-Ghuroba'' 0,5 kg', 'GHU', 48000,100),
+
+('GIC606', 'Jarum Bekam 21G isi 200 Magic Star (kotak kuning)', 'GIC', 115000,100),
+('GIC607', 'Jarum Bekam 21G isi 200 Magic Star Reguler', 'GIC', 70000,100),
+('GIC608', 'Jarum Bekam 28G isi 100 Magic Star', 'GIC', 35000,100),
+('GIC609', 'Jarum Bekam 28G isi 200 Magic Star', 'GIC', 70000,100),
+('GIC610', 'Lancing Device Plastic Autoklik Magic Star', 'GIC', 60000,100),
+('GIC611', 'Lancing Device Stainless Steel Automatic Magic Sta', 'GIC', 140000,100),
+
+('H99420', 'Graptolin (Kapsul Daun Ungu)', 'H99', 40000,100),
+('H99421', 'X Zatiron Serbuk 3 in 1 (Stamina, Vitalitas)', 'H99', 50000,100),
+('H99422', 'X Zatiron Tribulus Terrestris Capsule (Stamina, Vi', 'H99', 50000,100),
+
+('HEF398', 'Beauty Booster Plus Pueraria Mirifica Cream (Peraw', 'HEF', 150000,100),
+('HEF399', 'LAYLA Cream (Penghilang Bekas Luka, Pemutih Ketiak', 'HEF', 35000,100),
+('HEF400', 'Minyak Bulus BIO OIL', 'HEF', 25000,100),
+('HEF401', 'Morinda Cream plus Tabir Surya', 'HEF', 35000,100),
+('HEF402', 'NAYLA Gamat & Royal Jelly Regenerating Cream (NRC)', 'HEF', 35000,100),
+('HEF403', 'NAYLA Gamat Facial Soap 70 ml', 'HEF', 25000,100),
+
+('HEM404', 'Extract Oil Habbasauda + Garlic isi 60 Kapsul', 'HEM', 35000,100),
+('HEM405', 'Extract Oil Habbasauda + Kemangi', 'HEM', 35000,100),
+('HEM406', 'Extract Oil Habbasauda + Kunyit', 'HEM', 35000,100),
+('HEM407', 'Extract Oil Habbasauda + Mengkudu', 'HEM', 35000,100),
+('HEM408', 'Extract Oil Habbasauda + Mimba', 'HEM', 35000,100),
+('HEM409', 'Extract Oil Habbasauda + Propolis isi 200 Kapsul', 'HEM', 90000,100),
+('HEM410', 'Extract Oil Habbasauda + Propolis isi 60 Kapsul', 'HEM', 35000,100),
+('HEM411', 'Extract Oil Habbasauda + Sambiloto', 'HEM', 35000,100),
+('HEM412', 'Extract Oil Habbasauda + Seledri', 'HEM', 35000,100),
+('HEM413', 'Extract Oil Habbasauda + Sirih Merah', 'HEM', 35000,100),
+('HEM414', 'Extract Oil Habbasauda + Sirsak isi 200 kapsul', 'HEM', 90000,100),
+('HEM415', 'Extract Oil Habbasauda + Sirsak isi 60 Kapsul', 'HEM', 35000,100),
+('HEM416', 'Extract Oil Habbasauda + Temulawak', 'HEM', 35000,100),
+('HEM417', 'Extract Oil Habbasauda + Zaitun isi 60 Kapsul', 'HEM', 25000,100),
+('HEM418', 'Extract Oil Habbassauda + Garlic isi 200 Kapsul', 'HEM', 85000,100),
+('HEM419', 'Extract Oil Habbatussauda + Zaitun isi 200 Kapsul', 'HEM', 80000,100),
+
+('HFI423', 'BIDARASAUDA Herbafit', 'HFI', 45000,100),
+('HFI424', 'FITENSI (Meringankan Tekanan Darah)', 'HFI', 45000,100),
+('HFI425', 'GURAFIT Kapsul Gurah Jumbo Herbafit', 'HFI', 45000,100),
+('HFI426', 'Gurah Anak Herbafit', 'HFI', 20000,100),
+('HFI427', 'Gurah Mint Herbafit', 'HFI', 30000,100),
+('HFI428', 'HERBABET / Obat Diabetes Herbafit', 'HFI', 45000,100),
+('HFI429', 'Herbamax Herbafit (Khusus Suami)', 'HFI', 40000,100),
+('HFI430', 'Herba-V Herbafit', 'HFI', 45000,100),
+('HFI431', 'Kapsul Asam Urat Herbafit', 'HFI', 45000,100),
+('HFI432', 'Kapsul Gurah Pot Herbafit', 'HFI', 15000,100),
+('HFI433', 'Obat Kanker Herbafit', 'HFI', 45000,100),
+('HFI434', 'Pelangsing Herbafit', 'HFI', 35000,100),
+('HFI435', 'STOPMAA / Obat Maag Herbafit', 'HFI', 45000,100),
+
+('HIN001', 'Guratic (Meredakan Pegal Linu)', 'HIN', 50000,100),
+('HIN002', 'Kapsul Herba Setamol (Membantu Meredakan Demam)', 'HIN', 45000,100),
+('HIN003', 'Kemofit (untuk Penderita Kanker)', 'HIN', 50000,100),
+('HIN004', 'Lulur Harum Malam', 'HIN', 15000,100),
+('HIN005', 'MilkCo Oatmeal Instant Jahe Alami', 'HIN', 50000,100),
+('HIN006', 'MilkCo Oatmeal Instant Natural', 'HIN', 50000,100),
+('HIN007', 'Minuman Instan Anak Hebat Coklat', 'HIN', 30000,100),
+('HIN008', 'Minuman Instan Anak Hebat Plus Madu', 'HIN', 30000,100),
+('HIN009', 'Minuman Instan Anak Hebat Strawberry', 'HIN', 30000,100),
+('HIN010', 'Param kencur (Meredakan Pegal Linu dan Encok)', 'HIN', 15000,100),
+('HIN011', 'Pembasuh Arum Dalu', 'HIN', 15000,100),
+('HIN012', 'PILIS Natural (Sehat Pasca Bersalin)', 'HIN', 15000,100),
+('HIN013', 'PROLEGA (Membantu Melonggarkan Pernapasan)', 'HIN', 50000,100),
+('HIN014', 'Sabun Wajah Herbal Olivea Gamat', 'HIN', 12500,100),
+('HIN015', 'Sabun Wajah Herbal Olivea Kulit Manggis', 'HIN', 12500,100),
+('HIN016', 'Sabun Wajah Herbal Olivea Propolis', 'HIN', 12500,100),
+('HIN017', 'Sabun Wajah Herbal Olivea Virgin Coconut Oil', 'HIN', 12500,100),
+('HIN018', 'Shampo Herbal Zaitun OLIVEA plus Aloe Vera', 'HIN', 25000,100),
+('HIN019', 'Shampo Herbal Zaitun OLIVEA plus Gamat', 'HIN', 25000,100),
+('HIN020', 'Shampo Herbal Zaitun OLIVEA plus Ginseng', 'HIN', 25000,100),
+('HIN021', 'Shampo Herbal Zaitun OLIVEA plus Pegagan', 'HIN', 25000,100),
+('HIN022', 'Teh Herbal Sarang Walet Plus Alang-Alang', 'HIN', 40000,100),
+('HIN023', 'Teh Herbal Sarang Walet Plus Beluntas', 'HIN', 40000,100),
+('HIN024', 'Teh Herbal Sarang Walet Plus Pegagan', 'HIN', 40000,100),
+('HIN025', 'Teh Herbal Sarang Walet Plus Sambung Nyawa', 'HIN', 40000,100),
+('HIN026', 'Teh Herbal Sarang Walet Plus Sirih Merah', 'HIN', 40000,100),
+('HIN027', 'Teh Herbal Sarang Walet Stamina Plus', 'HIN', 40000,100),
+('HIN028', 'Tensofit (Meringankan Tekanan Darah Tinggi)', 'HIN', 40000,100),
+('HIN029', 'WASANGIN (Meredakan Gejala Masuk Angin)', 'HIN', 35000,100),
+('HIN030', 'WAZERO (Meringankan Gejala Wasir)', 'HIN', 40000,100),
+('HIN096', 'Bedak Dingin Citra Herba Insani', 'HIN', 15000,100),
+('HIN097', 'Fitomaa (untuk Gangguan Lambung)', 'HIN', 40000,100),
+('HIN098', 'Gempur Batu (Meluruhkan Batu Oksalat di Ginjal)', 'HIN', 40000,100),
+('HIN099', 'GINOLA (Menjaga Kesehatan Ginjal)', 'HIN', 40000,100),
+
+('HIS528', 'Bee Pollen 75 Kapsul Herbal Inti Sehat', 'HIS', 35000,100),
+('HIS529', 'Cream Fathimah Plus', 'HIS', 30000,100),
+('HIS530', 'Diabetes Herbal Inti Sehat', 'HIS', 40000,100),
+('HIS531', 'Gemuk Sehat Herbal Inti Sehat', 'HIS', 40000,100),
+('HIS532', 'Herba Lelaki Herbal Inti Sehat', 'HIS', 40000,100),
+('HIS533', 'Herbal Kolesterol Herbal Inti Sehat', 'HIS', 40000,100),
+('HIS534', 'Herbal Stroke/Syaraf Herbal Inti Sehat', 'HIS', 50000,100),
+('HIS535', 'Hipertensi Herbal Inti Sehat', 'HIS', 40000,100),
+('HIS536', 'ISPA HIS', 'HIS', 40000,100),
+('HIS537', 'Kapsul Hernia Herbal Inti Sehat', 'HIS', 40000,100),
+('HIS538', 'Kapsul Ikan Kutuk ALBUMINO', 'HIS', 50000,100),
+('HIS539', 'Kapsul Kulit Manggis Herbal Inti Sehat', 'HIS', 35000,100),
+('HIS540', 'Kapsul Sarang Semut Herbal Inti Sehat', 'HIS', 50000,100),
+('HIS541', 'Kapsul Temulawak Herbal Inti Sehat', 'HIS', 35000,100),
+('HIS542', 'Keladi Tikus Super Herbal Inti Sehat', 'HIS', 50000,100),
+('HIS543', 'Madu Gurah Plus Menthol Alam', 'HIS', 45000,100),
+('HIS544', 'Neo Gamat', 'HIS', 50000,100),
+('HIS545', 'Neo Gamat Gold', 'HIS', 60000,100),
+('HIS546', 'Neo Spirulina Herbal Inti Sehat', 'HIS', 50000,100),
+('HIS547', 'Sehat Ginjal HIS', 'HIS', 40000,100),
+('HIS548', 'Sehat Jantung Herbal Inti Sehat', 'HIS', 40000,100),
+('HIS549', 'Sehat Mata HIS', 'HIS', 45000,100),
+('HIS550', 'V-Minim HIS', 'HIS', 40000,100),
+
+('HIU436', 'Androbiotik (Sambiloto Plus)', 'HIU', 40000,100),
+('HIU437', 'Bantu-Gin (Mencegah dan Mengatasi Gangguan Batu Gi', 'HIU', 40000,100),
+('HIU438', 'Cream Aliya Cantik Natural Anti Acne (Solusi Jeraw', 'HIU', 40000,100),
+('HIU439', 'Cream Aliya Cantik Natural Regenerating', 'HIU', 40000,100),
+('HIU440', 'Diacare (Mengobati Kencing Manis dan Mencegah Komp', 'HIU', 45000,100),
+('HIU441', 'FITOGURA (Meredakan Flu & Batuk)', 'HIU', 55000,100),
+('HIU442', 'Gastromaag', 'HIU', 40000,100),
+('HIU443', 'Gurah Flu & Batuk', 'HIU', 40000,100),
+('HIU444', 'Habbatussauda plus Mengkudu', 'HIU', 40000,100),
+('HIU445', 'Hemoroid', 'HIU', 45000,100),
+('HIU446', 'Herba Arum', 'HIU', 40000,100),
+('HIU447', 'Herba ASI (Herbal Indo Utama)', 'HIU', 40000,100),
+('HIU448', 'Herba BAB (Herbal Indo Utama)', 'HIU', 40000,100),
+('HIU449', 'Herba Cakar Ayam HIU', 'HIU', 40000,100),
+('HIU450', 'Herba Cardiocare', 'HIU', 45000,100),
+('HIU451', 'Herba Daun Dewa Herbal Indo Utama', 'HIU', 45000,100),
+('HIU452', 'Herba TDR (Insomnia) HIU', 'HIU', 45000,100),
+('HIU453', 'Herba Tonsil (Mencegah dan Mengobati Radang Amande', 'HIU', 40000,100),
+('HIU454', 'Herba Typhusa (Mencegah dan Mengobati Penyakit Typ', 'HIU', 40000,100),
+('HIU455', 'HERSAGI (Herbal Sakit Gigi)', 'HIU', 30000,100),
+('HIU456', 'HERSARI (Herbal Sariawan)', 'HIU', 25000,100),
+('HIU457', 'Hipotensi Herbal Indo Utama', 'HIU', 45000,100),
+('HIU458', 'Histaminic', 'HIU', 45000,100),
+('HIU459', 'HIU HEPAFIT (Hepatitis)', 'HIU', 50000,100),
+('HIU460', 'HIU Silangsing\n\n\nSiLangsing (Herbal Pelangsing)', 'HIU', 50000,100),
+('HIU461', 'Joss - X (Menambah Stamina dan Keperkasaan Pria)', 'HIU', 40000,100),
+('HIU462', 'Joss-V (Solusi Problema Kewanitaan)', 'HIU', 40000,100),
+('HIU463', 'Kapsul Cabe Jawa HIU', 'HIU', 45000,100),
+('HIU464', 'Kapsul Daun Salam HIU', 'HIU', 40000,100),
+('HIU465', 'Kapsul Daun Sirsak Herbal Indo Utama', 'HIU', 45000,100),
+('HIU466', 'Kapsul Gamat (Gamat Emas) Herbal Indo Utama', 'HIU', 75000,100),
+('HIU467', 'Kapsul Habbatussauda Oil Thibbuna isi 100 Kapsul', 'HIU', 39000,100),
+('HIU468', 'Kapsul Habbatussauda Oil Thibbuna isi 210 Kapsul', 'HIU', 72000,100),
+('HIU469', 'Kapsul Habbatussauda Thibbuna isi 100 Kapsul', 'HIU', 17000,100),
+('HIU470', 'Kapsul Habbatussauda Thibbuna isi 20 Kapsul', 'HIU', 6000,100),
+('HIU471', 'Kapsul Habbatussauda Thibbuna isi 210 Kapsul', 'HIU', 33000,100),
+('HIU472', 'Kapsul Habbatussauda Thibbuna isi 500 Kapsul', 'HIU', 72000,100),
+('HIU473', 'Kapsul Herbislim Herbal Indo Utama', 'HIU', 50000,100),
+('HIU474', 'Kapsul Keladi Tikus Plus Herbal Indo Utama', 'HIU', 45000,100),
+('HIU475', 'Kapsul Kulit Manggis HIU', 'HIU', 45000,100),
+('HIU476', 'Kapsul Kumis Kucing Herbal Indo Utama', 'HIU', 40000,100),
+('HIU477', 'Kapsul Mengkudu HIU', 'HIU', 40000,100),
+('HIU478', 'Kapsul Pasak Bumi HIU', 'HIU', 40000,100),
+('HIU479', 'Kapsul Rumput Mutiara HIU', 'HIU', 40000,100),
+('HIU480', 'Kapsul Sambung Nyowo Herbal Indo Utama', 'HIU', 45000,100),
+('HIU481', 'Madu Kelengkeng 300 gr Honeymart', 'HIU', 50000,100),
+('HIU482', 'Madu Kelengkeng 450 gr + 100gr  Honeymart', 'HIU', 75000,100),
+('HIU483', 'Madu Kelengkeng 900 gr + 200 gr  Honeymart', 'HIU', 140000,100),
+('HIU484', 'Madu Kopi 300 gr Honeymart', 'HIU', 35000,100),
+('HIU485', 'Madu Kopi 450 gr + 100gr  Honeymart', 'HIU', 55000,100),
+('HIU486', 'Madu Kopi 900 gr + 200 gr  Honeymart', 'HIU', 105000,100),
+('HIU487', 'Madu Mangga 300 gr Honeymart', 'HIU', 40000,100),
+('HIU488', 'Madu Mangga 450 gr + 100 gr Honeymart', 'HIU', 60000,100),
+('HIU489', 'Madu Mangga 900 gr + 200 gr  Honeymart', 'HIU', 118000,100),
+('HIU490', 'Madu Multiflora 450 gr + 100gr  Honeymart', 'HIU', 55000,100),
+('HIU491', 'Madu Multiflora 900 gr + 200 gr  Honeymart', 'HIU', 105000,100),
+('HIU492', 'Madu Rambutan 300 gr Honeymart', 'HIU', 35000,100),
+('HIU493', 'Madu Rambutan 450 gr + 100 gr Honeymart', 'HIU', 55000,100),
+('HIU494', 'Madu Rambutan 900 gr + 200 gr  Honeymart', 'HIU', 105000,100),
+('HIU495', 'Madu Randu 300 gr Honeymart', 'HIU', 40000,100),
+('HIU496', 'Madu Randu 450 gr + 100 gr Honeymart', 'HIU', 60000,100),
+('HIU497', 'Madu Randu 900 gr + 200 gr  Honeymart', 'HIU', 110000,100),
+('HIU498', 'Madu Syifa Kids Alergi dan Gatal', 'HIU', 40000,100),
+('HIU499', 'Madu Syifa Kids Cerdas dan Cendekia', 'HIU', 40000,100),
+('HIU500', 'Madu Syifa Kids Diare', 'HIU', 40000,100),
+('HIU501', 'Madu Syifa Kids Fluba', 'HIU', 40000,100),
+('HIU502', 'Madu Syifa Kids ISPA dan Flek Paru', 'HIU', 40000,100),
+('HIU503', 'Madu Syifa Kids Mata Sehat', 'HIU', 40000,100),
+('HIU504', 'Madu Syifa Kids Nafsu Makan dan Cacingan', 'HIU', 40000,100),
+('HIU505', 'Madu Syifa Kids Penawar Angin', 'HIU', 40000,100),
+('HIU506', 'Madu Syifa Kids Promandel', 'HIU', 40000,100),
+('HIU507', 'Madu Syifa Kids Propolis', 'HIU', 50000,100),
+('HIU508', 'Madu Syifa Kids Sembelit', 'HIU', 40000,100),
+('HIU509', 'Madu Syifa Kids Turun Panas', 'HIU', 40000,100),
+('HIU510', 'Minyak Habbatussauda Thibbuna 100 ml', 'HIU', 44000,100),
+('HIU511', 'Minyak Habbatussauda Thibbuna 30 ml', 'HIU', 17000,100),
+('HIU512', 'Minyak Habbatussauda Thibbuna 60 ml', 'HIU', 33000,100),
+('HIU513', 'Minyak Zaitun Extra Virgin Thibbuna 100 ml', 'HIU', 20000,100),
+('HIU514', 'Minyak Zaitun Extra Virgin Thibbuna 30 ml', 'HIU', 8000,100),
+('HIU515', 'Minyak Zaitun Extra Virgin Thibbuna 60 ml', 'HIU', 14000,100),
+('HIU516', 'Nafsu Makan Herbal Indo Utama', 'HIU', 40000,100),
+('HIU517', 'Neo_Tensi (Mencegah dan Mengobati Darah Tinggi)', 'HIU', 45000,100),
+('HIU518', 'Neuro Herba (Stroke)', 'HIU', 55000,100),
+('HIU519', 'Papua Sarang Semut Herbal Indo Utama', 'HIU', 75000,100),
+('HIU520', 'Pro Koles (Menurunkan Kolesterol Tinggi dan Menceg', 'HIU', 45000,100),
+('HIU521', 'PROSAMURA', 'HIU', 45000,100),
+('HIU522', 'Prostat Herbal Indo Utama', 'HIU', 45000,100),
+('HIU523', 'SAMURATIK', 'HIU', 55000,100),
+('HIU524', 'Sari Kurma Gold Thibbuna', 'HIU', 30000,100),
+('HIU525', 'Superfood Spirulins', 'HIU', 60000,100),
+('HIU526', 'Zaitun Oil Thibbuna isi 100 Kapsul', 'HIU', 25000,100),
+('HIU527', 'Zaitun Oil Thibbuna isi 210 Kapsul', 'HIU', 44000,100),
+
+('HPN137', 'Air Hajar Sa''adah 3 ml El Hanif', 'HPN', 65000,100),
+('HPN138', 'Minyak Alami Tongkat Satria (Untuk Suami)', 'HPN', 80000,100),
+('HPN139', 'Minyak Bulus El-Hanif', 'HPN', 25000,100),
+('HPN140', 'Obat Luka Jempolan (Obat Luka Diabetes)', 'HPN', 35000,100),
+('HPN141', 'Tongkat Gurah ''V'' El-Hanif', 'HPN', 75000,100),
+
+('IMA142', 'Coffe Habasy Ginseng ( 18 in 1)', 'IMA', 25000,100),
+('IMA143', 'Kopi Plus Lingzhi (Rendah Kafein, Atasi Kanker)', 'IMA', 50000,100),
+('IMA144', 'Madu Batuk El Iman 175 gram', 'IMA', 30000,100),
+('IMA145', 'Madu Thypus El Iman', 'IMA', 55000,100),
+
+('KHO042', 'Madu Hitam Sumbawa Al Khodry', 'KHO', 75000,100),
+('KHO043', 'Minyak Kemiri Premium Al Khodry', 'KHO', 25000,100),
+
+('KIA025', 'Air Hajar Sa''adah/Jahannam Mesir 3 ml Al Kautsar', 'KIA', 65000,100),
+('KIA026', 'BILQIS CREAM (Pemutih Ketiak dan Selangkangan)', 'KIA', 55000,100),
+('KIA027', 'Breast Up Cream (Pengencang Payudara)', 'KIA', 85000,100),
+('KIA028', 'Ekstrak Tribulus Gold Terrestris', 'KIA', 50000,100),
+('KIA029', 'Hajar Sa''adah Black Stone With Aroma Teraphy', 'KIA', 90000,100),
+('KIA030', 'Herbal Axilla (Penghilang Bau Badan)', 'KIA', 35000,100),
+('KIA031', 'Humairo Cream Nature', 'KIA', 35000,100),
+('KIA032', 'Kopi Sulthon 7 in 1 (Kopinya Keluarga Harmonis)', 'KIA', 100000,100),
+('KIA033', 'Ladies Whitening Cream (Pemutih Wajah dan Leher)', 'KIA', 45000,100),
+('KIA034', 'Long Big Enlargement X Nature Oil 6 ml', 'KIA', 200000,100),
+('KIA035', 'Minyak Bulus Al Kautsar', 'KIA', 25000,100),
+('KIA036', 'Minyak Bulus Plus Al Kautsar', 'KIA', 30000,100),
+('KIA037', 'Minyak Gosok Sumbawa Asli', 'KIA', 50000,100),
+('KIA038', 'Permanent Penis Enlargement (Natural Oil)', 'KIA', 120000,100),
+('KIA039', 'Pil Manjakani (Female Solution)', 'KIA', 95000,100),
+('KIA040', 'Squalene Cream (Cerahkan Kulit Wajah)', 'KIA', 35000,100),
+('KIA041', 'Tongkat Gurah Vagina Super (TGV Super)', 'KIA', 75000,100),
+
+('MAB064', 'OSaGi (Obat Sakit Gigi)', 'MAB', 35000,100),
+('MAB065', 'OSARI (Obat Sariawan dan Panas Dalam)', 'MAB', 35000,100),
+
+('MEN592', 'Madu Propolis Sapu Jagad Plus Royal Jelly & Habbat', 'MEN', 40000,100),
+('MEN593', 'Mama Honey Bumil', 'MEN', 25000,100),
+('MEN594', 'Mama Honey Busui', 'MEN', 25000,100),
+('MEN595', 'Mama Honey Subur', 'MEN', 25000,100),
+('MEN596', 'Manja Honey', 'MEN', 30000,100),
+('MEN597', 'Mumtaz Kids Honey', 'MEN', 25000,100),
+('MEN598', 'Ramuan Madu Pedang Arab (Khusus Pria)', 'MEN', 70000,100),
+('MEN599', 'Soyamil (Susu Herbal Ibu Hamil)', 'MEN', 28000,100),
+
+('MHE044', 'Afiafit', 'MHE', 60000,100),
+('MHE045', 'Madu Randu 0.5kg Al-Manar', 'MHE', 40000,100),
+
+
+('MUS046', 'Siwak Basah Import Al-Muslim', 'MUS', 12000,100),
+
+('NAH071', 'Kid''s Honey Complete Protect', 'NAH', 50000,100),
+('NAH072', 'Madu Hutan plus Spirulina', 'NAH', 40000,100),
+('NAH073', 'Madu Omega 3', 'NAH', 50000,100),
+('NAH074', 'Madu Xtamina Radix plus Ginseng Korea dan Tongkat ', 'NAH', 55000,100),
+('NAH075', 'Nigella Propolis 100 Kapsul', 'NAH', 80000,100),
+('NAH076', 'Spirulina Kid''s Honey Plus Gamat dan Klorofil', 'NAH', 25000,100),
+('NAH077', 'Spirulina kid''s Honey plus Propolis', 'NAH', 25000,100),
+('NAH078', 'Spirulina Madu Stamina (+ Pegagan + Meniran + Pasa', 'NAH', 45000,100),
+('NAH079', 'Walad Honey (+ Kurma + Pegagan + Temulawak dll)', 'NAH', 22000,100),
+('NAH080', 'Walad Honey GOLD', 'NAH', 25000,100),
+('NAH081', 'Walad Honey Premium', 'NAH', 25000,100),
+
+('OIF066', 'Madu Hutan Multiflora 0,5 kg Ath Thoifah', 'OIF', 45000,100),
+('OIF067', 'Madu Hutan Multiflora 1 kg Ath Thoifah', 'OIF', 82000,100),
+('OIF068', 'Madu Hutan Platinum 0,5 kg Ath Thoifah', 'OIF', 49000,100),
+('OIF069', 'Madu Hutan Platinum 1 kg Ath Thoifah', 'OIF', 88000,100),
+
+('QUB001', 'Madu Pollen 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB002', 'Madu Putih 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB003', 'Madu Putih 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB004', 'Madu Rambutan 0,5 kg l Qubro', 'QUB', 45000,100),
+('QUB005', 'Madu Rambutan 1 kg Al Qubro', 'QUB', 65000,100),
+('QUB006', 'Madu Rami 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB007', 'Madu Rami 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB008', 'Madu Randu 0.5 kg Al-Qubro', 'QUB', 45000,100),
+('QUB009', 'Madu Randu 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB010', 'Madu Rosella 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB011', 'Madu Rosella 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB012', 'Madu Royal Honey 350 gram Al-Qubro', 'QUB', 60000,100),
+('QUB013', 'Madu Sarang 0,5 kg Al-Qubro', 'QUB', 85000,100),
+('QUB014', 'Madu Sarang 1 kg Al-Qubro', 'QUB', 120000,100),
+('QUB015', 'Madu Sengon 0,5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB016', 'Madu Sengon 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB017', 'Madu Songkeling 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB018', 'Madu Songkeling 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB019', 'Madu Stroberi 0.5 kg Al-Qubro', 'QUB', 45000,100),
+('QUB020', 'Madu Stroberi 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB021', 'Madu Sumbawa 0,5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB022', 'Madu Sumbawa 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB023', 'Madu Tawon Gong 0,5 kg Al Qubro', 'QUB', 45000,100),
+('QUB024', 'Madu Tawon Gong 1 kg al qubro', 'QUB', 65000,100),
+('QUB038', 'Brazil Honey 500 gr Al-Qubro', 'QUB', 150000,100),
+('QUB039', 'Madu Akasia 0.5 Kg A-Qubro', 'QUB', 45000,100),
+('QUB040', 'Madu Akasia 1 Kg A-Qubro', 'QUB', 65000,100),
+('QUB041', 'Madu Ambon 0,5 kg Al Qubro', 'QUB', 45000,100),
+('QUB042', 'Madu Ambon 1 kg Al Qubro', 'QUB', 65000,100),
+('QUB043', 'Madu Apel 0,5 kg Al Qubro', 'QUB', 45000,100),
+('QUB044', 'Madu Apel 1 kg Al Qubro', 'QUB', 65000,100),
+('QUB045', 'Madu Badui 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB046', 'Madu Badui 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB047', 'Madu Belimbing 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB048', 'Madu Belimbing 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB049', 'Madu Durian 0,5 kg al qubro', 'QUB', 45000,100),
+('QUB050', 'Madu Durian 1 kg Al Qubro', 'QUB', 65000,100),
+('QUB051', 'Madu Flores 0,5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB052', 'Madu Flores 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB053', 'Madu Gunung Mutis 0,5 kg Al Qubro', 'QUB', 45000,100),
+('QUB054', 'Madu Gunung Mutis 1 kg Al qubro', 'QUB', 65000,100),
+('QUB055', 'Madu Gurah Anak (MGA) Al-Qubro', 'QUB', 35000,100),
+('QUB056', 'Madu Gurah Dewasa Al-Qubro', 'QUB', 45000,100),
+('QUB057', 'Madu Hitam 0.5 kg Al-Qubro', 'QUB', 45000,100),
+('QUB058', 'Madu Hitam 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB059', 'Madu Hutan Riau 0.5 kg Al-Qubro', 'QUB', 45000,100),
+('QUB060', 'Madu Hutan Riau 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB061', 'Madu Jambi 0.5 kg Al-Qubro', 'QUB', 45000,100),
+('QUB062', 'Madu Jambi 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB063', 'Madu Jeruk 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB064', 'Madu Jeruk 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB065', 'Madu Kaliandra 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB066', 'Madu Kaliandra Al-Qubro 1kg', 'QUB', 65000,100); ]
+
+]
+[ TIME: Wed Jan 07 22:42:56 ICT 2015 ]
+% com.mckoi.database.StatementException: Can't find column: id_Product
+	at com.mckoi.database.interpret.Statement.resolveColumn(Statement.java:226)
+	at com.mckoi.database.interpret.Insert.prepare(Insert.java:153)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+[ TIME: Wed Jan 07 23:00:37 ICT 2015 ]
+% com.mckoi.database.sql.ParseException: Encountered "user" at line 1, column 15.
+Was expecting one of:
+    "old" ...
+    "new" ...
+    "name" ...
+    "java" ...
+    "action" ...
+    "groups" ...
+    "option" ...
+    "account" ...
+    "password" ...
+    "language" ...
+    "privileges" ...
+    <QUOTED_VARIABLE> ...
+    <IDENTIFIER> ...
+    <DOT_DELIMINATED_REF> ...
+    <QUOTED_DELIMINATED_REF> ...
+    "(" ...
+    
+	at com.mckoi.database.sql.SQL.generateParseException(SQL.java:6070)
+	at com.mckoi.database.sql.SQL.jj_consume_token(SQL.java:5939)
+	at com.mckoi.database.sql.SQL.TableDeclaration(SQL.java:2005)
+	at com.mckoi.database.sql.SQL.SelectTableList(SQL.java:2043)
+	at com.mckoi.database.sql.SQL.GetTableSelectExpression(SQL.java:1401)
+	at com.mckoi.database.sql.SQL.Select(SQL.java:315)
+	at com.mckoi.database.sql.SQL.Statement(SQL.java:162)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:94)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ select * from users ]
+
+]
+[ TIME: Wed Jan 07 23:01:07 ICT 2015 ]
+% com.mckoi.database.StatementException: Table 'APP.users' was not found.
+	at com.mckoi.database.interpret.Planner.generateFromSet(Planner.java:186)
+	at com.mckoi.database.interpret.Select.prepare(Select.java:119)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+[ TIME: Wed Jan 07 23:01:16 ICT 2015 ]
+% com.mckoi.database.sql.ParseException: Encountered "User" at line 1, column 15.
+Was expecting one of:
+    "old" ...
+    "new" ...
+    "name" ...
+    "java" ...
+    "action" ...
+    "groups" ...
+    "option" ...
+    "account" ...
+    "password" ...
+    "language" ...
+    "privileges" ...
+    <QUOTED_VARIABLE> ...
+    <IDENTIFIER> ...
+    <DOT_DELIMINATED_REF> ...
+    <QUOTED_DELIMINATED_REF> ...
+    "(" ...
+    
+	at com.mckoi.database.sql.SQL.generateParseException(SQL.java:6070)
+	at com.mckoi.database.sql.SQL.jj_consume_token(SQL.java:5939)
+	at com.mckoi.database.sql.SQL.TableDeclaration(SQL.java:2005)
+	at com.mckoi.database.sql.SQL.SelectTableList(SQL.java:2043)
+	at com.mckoi.database.sql.SQL.GetTableSelectExpression(SQL.java:1401)
+	at com.mckoi.database.sql.SQL.Select(SQL.java:315)
+	at com.mckoi.database.sql.SQL.Statement(SQL.java:162)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:94)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO Users (username, password, admin) VALUES
+('edwin', '123',true); ]
+
+]
+[ TIME: Wed Jan 07 23:01:47 ICT 2015 ]
+% com.mckoi.database.StatementException: Can't find column: password
+	at com.mckoi.database.interpret.Statement.resolveColumn(Statement.java:226)
+	at com.mckoi.database.interpret.Insert.prepare(Insert.java:153)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ SELECT * FROM produk ORDER BY id_product ]
+
+]
+[ TIME: Wed Jan 07 23:30:05 ICT 2015 ]
+% com.mckoi.database.StatementException: Table 'APP.produk' was not found.
+	at com.mckoi.database.interpret.Planner.generateFromSet(Planner.java:186)
+	at com.mckoi.database.interpret.Select.prepare(Select.java:119)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ SELECT * FROM produk ORDER BY id_product ]
+
+]
+[ TIME: Wed Jan 07 23:30:42 ICT 2015 ]
+% com.mckoi.database.StatementException: Table 'APP.produk' was not found.
+	at com.mckoi.database.interpret.Planner.generateFromSet(Planner.java:186)
+	at com.mckoi.database.interpret.Select.prepare(Select.java:119)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ DELETE FROM product WHERE id='AER' ]
+
+]
+[ TIME: Wed Jan 07 23:38:07 ICT 2015 ]
+% com.mckoi.database.StatementException: Reference 'id' not found.
+	at com.mckoi.database.interpret.TableExpressionFromSet.qualifyVariable(TableExpressionFromSet.java:470)
+	at com.mckoi.database.interpret.TableExpressionFromSet$1.prepare(TableExpressionFromSet.java:487)
+	at com.mckoi.database.Expression.prepare(Expression.java:368)
+	at com.mckoi.database.interpret.SearchExpression.prepare(SearchExpression.java:102)
+	at com.mckoi.database.interpret.Planner.prepareSearchExpression(Planner.java:96)
+	at com.mckoi.database.interpret.Planner.formQueryPlan(Planner.java:452)
+	at com.mckoi.database.interpret.Delete.prepare(Delete.java:114)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ UPDATE produk SET stok = stok-1 WHERE id='ABE007' ]
+
+]
+[ TIME: Wed Jan 07 23:38:57 ICT 2015 ]
+% com.mckoi.database.DatabaseException: Table 'APP.produk' does not exist.
+	at com.mckoi.database.interpret.UpdateTable.prepare(UpdateTable.java:101)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ UPDATE produk SET stok = stok-1 WHERE id='ABE007' ]
+
+]
+[ TIME: Wed Jan 07 23:39:55 ICT 2015 ]
+% com.mckoi.database.DatabaseException: Table 'APP.produk' does not exist.
+	at com.mckoi.database.interpret.UpdateTable.prepare(UpdateTable.java:101)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ DELETE FROM product WHERE id='AER' ]
+
+]
+[ TIME: Wed Jan 07 23:42:49 ICT 2015 ]
+% com.mckoi.database.StatementException: Reference 'id' not found.
+	at com.mckoi.database.interpret.TableExpressionFromSet.qualifyVariable(TableExpressionFromSet.java:470)
+	at com.mckoi.database.interpret.TableExpressionFromSet$1.prepare(TableExpressionFromSet.java:487)
+	at com.mckoi.database.Expression.prepare(Expression.java:368)
+	at com.mckoi.database.interpret.SearchExpression.prepare(SearchExpression.java:102)
+	at com.mckoi.database.interpret.Planner.prepareSearchExpression(Planner.java:96)
+	at com.mckoi.database.interpret.Planner.formQueryPlan(Planner.java:452)
+	at com.mckoi.database.interpret.Delete.prepare(Delete.java:114)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ UPDATE produk SET stok = stok-1 WHERE id='ABE007' ]
+
+]
+[ TIME: Wed Jan 07 23:44:32 ICT 2015 ]
+% com.mckoi.database.DatabaseException: Table 'APP.produk' does not exist.
+	at com.mckoi.database.interpret.UpdateTable.prepare(UpdateTable.java:101)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ UPDATE produk SET stok = stok-1 WHERE id_product='ABE007' ]
+
+]
+[ TIME: Wed Jan 07 23:47:38 ICT 2015 ]
+% com.mckoi.database.DatabaseException: Table 'APP.produk' does not exist.
+	at com.mckoi.database.interpret.UpdateTable.prepare(UpdateTable.java:101)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+**** Debug log started: Thu Jan 08 01:23:22 ICT 2015 ****
+% Storage System: v1 file storage mode.
+% Internal Data Cache size:          4194304
+% Internal Data Cache max cell size: 8192
+% lookup_comparison_list = false
+% read_only = false
+% transaction_error_on_dirty_select = true
+% ignore_case_for_identifiers = false
+% Java NIO API is available.
+% io_safety_level = 10
+% Using stardard IO API for heap buffered file access.
+% [Buffer Manager] Using IO API: Java IO
+% [Buffer Manager] Page Size: 8192
+% [Buffer Manager] Max pages: 256
+% Using regex bridge: java.util.regexp
+% No 'function_factories' config property found.
+% statement_cache = true
+% Max worker threads set to: 4
+% Starting Database Server
+> com.mckoi.database.V1FileStoreSystem ( lvl: 20 )
+  File lock file exists: .\data\DefaultDatabase.lock
+**** Debug log started: Thu Jan 08 14:44:46 ICT 2015 ****
+% Storage System: v1 file storage mode.
+% Internal Data Cache size:          4194304
+% Internal Data Cache max cell size: 8192
+% lookup_comparison_list = false
+% read_only = false
+% transaction_error_on_dirty_select = true
+% ignore_case_for_identifiers = false
+% Java NIO API is available.
+% io_safety_level = 10
+% Using stardard IO API for heap buffered file access.
+% [Buffer Manager] Using IO API: Java IO
+% [Buffer Manager] Page Size: 8192
+% [Buffer Manager] Max pages: 256
+% Using regex bridge: java.util.regexp
+% No 'function_factories' config property found.
+% statement_cache = true
+% Max worker threads set to: 4
+% Starting Database Server
+> com.mckoi.database.V1FileStoreSystem ( lvl: 20 )
+  File lock file exists: .\data\DefaultDatabase.lock
+**** Debug log started: Thu Jan 08 19:59:37 ICT 2015 ****
+% Storage System: v1 file storage mode.
+% Internal Data Cache size:          4194304
+% Internal Data Cache max cell size: 8192
+% lookup_comparison_list = false
+% read_only = false
+% transaction_error_on_dirty_select = true
+% ignore_case_for_identifiers = false
+% Java NIO API is available.
+% io_safety_level = 10
+% Using stardard IO API for heap buffered file access.
+% [Buffer Manager] Using IO API: Java IO
+% [Buffer Manager] Page Size: 8192
+% [Buffer Manager] Max pages: 256
+% Using regex bridge: java.util.regexp
+% No 'function_factories' config property found.
+% statement_cache = true
+% Max worker threads set to: 4
+% Starting Database Server
+> com.mckoi.database.V1FileStoreSystem ( lvl: 20 )
+  File lock file exists: .\data\DefaultDatabase.lock
+**** Debug log started: Fri Jan 09 03:49:28 ICT 2015 ****
+% Storage System: v1 file storage mode.
+% Internal Data Cache size:          4194304
+% Internal Data Cache max cell size: 8192
+% lookup_comparison_list = false
+% read_only = false
+% transaction_error_on_dirty_select = true
+% ignore_case_for_identifiers = false
+% Java NIO API is available.
+% io_safety_level = 10
+% Using stardard IO API for heap buffered file access.
+% [Buffer Manager] Using IO API: Java IO
+% [Buffer Manager] Page Size: 8192
+% [Buffer Manager] Max pages: 256
+% Using regex bridge: java.util.regexp
+% No 'function_factories' config property found.
+% statement_cache = true
+% Max worker threads set to: 4
+% Starting Database Server
+> com.mckoi.database.V1FileStoreSystem ( lvl: 20 )
+  File lock file exists: .\data\DefaultDatabase.lock
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ select*from users ]
+
+]
+[ TIME: Fri Jan 09 04:11:09 ICT 2015 ]
+% com.mckoi.database.StatementException: Table 'APP.users' was not found.
+	at com.mckoi.database.interpret.Planner.generateFromSet(Planner.java:186)
+	at com.mckoi.database.interpret.Select.prepare(Select.java:119)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+[ TIME: Fri Jan 09 04:11:16 ICT 2015 ]
+% com.mckoi.database.sql.ParseException: Encountered "user" at line 1, column 14.
+Was expecting one of:
+    "old" ...
+    "new" ...
+    "name" ...
+    "java" ...
+    "action" ...
+    "groups" ...
+    "option" ...
+    "account" ...
+    "password" ...
+    "language" ...
+    "privileges" ...
+    <QUOTED_VARIABLE> ...
+    <IDENTIFIER> ...
+    <DOT_DELIMINATED_REF> ...
+    <QUOTED_DELIMINATED_REF> ...
+    "(" ...
+    
+	at com.mckoi.database.sql.SQL.generateParseException(SQL.java:6070)
+	at com.mckoi.database.sql.SQL.jj_consume_token(SQL.java:5939)
+	at com.mckoi.database.sql.SQL.TableDeclaration(SQL.java:2005)
+	at com.mckoi.database.sql.SQL.SelectTableList(SQL.java:2043)
+	at com.mckoi.database.sql.SQL.GetTableSelectExpression(SQL.java:1401)
+	at com.mckoi.database.sql.SQL.Select(SQL.java:315)
+	at com.mckoi.database.sql.SQL.Statement(SQL.java:162)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:94)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ select *from users ]
+
+]
+[ TIME: Fri Jan 09 04:11:19 ICT 2015 ]
+% com.mckoi.database.StatementException: Table 'APP.users' was not found.
+	at com.mckoi.database.interpret.Planner.generateFromSet(Planner.java:186)
+	at com.mckoi.database.interpret.Select.prepare(Select.java:119)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+[ TIME: Fri Jan 09 05:01:30 ICT 2015 ]
+% com.mckoi.database.sql.ParseException: Encountered "SHOOW" at line 1, column 1.
+Was expecting one of:
+    "drop" ...
+    "show" ...
+    "alter" ...
+    "select" ...
+    "update" ...
+    "create" ...
+    "delete" ...
+    "insert" ...
+    "commit" ...
+    "compact" ...
+    "rollback" ...
+    "describe" ...
+    "shutdown" ...
+    "set" ...
+    "call" ...
+    "grant" ...
+    "revoke" ...
+    
+	at com.mckoi.database.sql.SQL.generateParseException(SQL.java:6070)
+	at com.mckoi.database.sql.SQL.jj_consume_token(SQL.java:5939)
+	at com.mckoi.database.sql.SQL.Statement(SQL.java:212)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:94)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+**** Debug log started: Fri Jan 09 05:42:17 ICT 2015 ****
+% Storage System: v1 file storage mode.
+% Internal Data Cache size:          4194304
+% Internal Data Cache max cell size: 8192
+% lookup_comparison_list = false
+% read_only = false
+% transaction_error_on_dirty_select = true
+% ignore_case_for_identifiers = false
+% Java NIO API is available.
+% io_safety_level = 10
+% Using stardard IO API for heap buffered file access.
+% [Buffer Manager] Using IO API: Java IO
+% [Buffer Manager] Page Size: 8192
+% [Buffer Manager] Max pages: 256
+% Using regex bridge: java.util.regexp
+% No 'function_factories' config property found.
+% statement_cache = true
+% Max worker threads set to: 4
+% Starting Database Server
+> com.mckoi.database.V1FileStoreSystem ( lvl: 20 )
+  File lock file exists: .\data\DefaultDatabase.lock
+**** Debug log started: Fri Jan 09 13:58:57 ICT 2015 ****
+% Storage System: v1 file storage mode.
+% Internal Data Cache size:          4194304
+% Internal Data Cache max cell size: 8192
+% lookup_comparison_list = false
+% read_only = false
+% transaction_error_on_dirty_select = true
+% ignore_case_for_identifiers = false
+% Java NIO API is available.
+% io_safety_level = 10
+% Using stardard IO API for heap buffered file access.
+% [Buffer Manager] Using IO API: Java IO
+% [Buffer Manager] Page Size: 8192
+% [Buffer Manager] Max pages: 256
+% Using regex bridge: java.util.regexp
+% No 'function_factories' config property found.
+% statement_cache = true
+% Max worker threads set to: 4
+% Starting Database Server
+> com.mckoi.database.V1FileStoreSystem ( lvl: 20 )
+  File lock file exists: .\data\DefaultDatabase.lock
+**** Debug log started: Fri Jan 09 14:11:39 ICT 2015 ****
+% Storage System: v1 file storage mode.
+% Internal Data Cache size:          4194304
+% Internal Data Cache max cell size: 8192
+% lookup_comparison_list = false
+% read_only = false
+% transaction_error_on_dirty_select = true
+% ignore_case_for_identifiers = false
+% Java NIO API is available.
+% io_safety_level = 10
+% Using stardard IO API for heap buffered file access.
+% [Buffer Manager] Using IO API: Java IO
+% [Buffer Manager] Page Size: 8192
+% [Buffer Manager] Max pages: 256
+% Using regex bridge: java.util.regexp
+% No 'function_factories' config property found.
+% statement_cache = true
+% Max worker threads set to: 4
+% Starting Database Server
+> com.mckoi.database.V1FileStoreSystem ( lvl: 20 )
+  File lock file exists: .\data\DefaultDatabase.lock
+**** Debug log started: Sat Jan 10 04:22:13 ICT 2015 ****
+% Storage System: v1 file storage mode.
+% Internal Data Cache size:          4194304
+% Internal Data Cache max cell size: 8192
+% lookup_comparison_list = false
+% read_only = false
+% transaction_error_on_dirty_select = true
+% ignore_case_for_identifiers = false
+% Java NIO API is available.
+% io_safety_level = 10
+% Using stardard IO API for heap buffered file access.
+% [Buffer Manager] Using IO API: Java IO
+% [Buffer Manager] Page Size: 8192
+% [Buffer Manager] Max pages: 256
+% Using regex bridge: java.util.regexp
+% No 'function_factories' config property found.
+% statement_cache = true
+% Max worker threads set to: 4
+% Starting Database Server
+> com.mckoi.database.V1FileStoreSystem ( lvl: 20 )
+  File lock file exists: .\data\DefaultDatabase.lock
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ select *from Transaksi ]
+
+]
+[ TIME: Sat Jan 10 04:28:47 ICT 2015 ]
+% com.mckoi.database.StatementException: Table 'APP.Transaksi' was not found.
+	at com.mckoi.database.interpret.Planner.generateFromSet(Planner.java:186)
+	at com.mckoi.database.interpret.Select.prepare(Select.java:119)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
